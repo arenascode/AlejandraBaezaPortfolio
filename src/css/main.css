@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap");
+:root {
+  --color-background-page: #ffffff;
+  --color-titles-headers: #262626;
+  --color-contactMeBtn-MainSlider: #696969;
+  --color-cta-btn: #fd6500;
+  --color-contactMe-Bar: #f9f6f1;
+  --Font-Body: "Nunito Sans", sans-serif;
+  --Font-Titles: "Playfair Display", serif; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #181818;
+    --secondary-color: #f0f0f0; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* Optional */
+  object-fit: cover;
+  /* Optional */
+  object-position: center center; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--Font-Titles); }
+
+a {
+  display: block; }
+
+p a {
+  display: inline; }
+
+li {
+  list-style-type: none; }
+
+html {
+  scroll-behavior: smooth; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+::selection {
+  background-color: #696969; }
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit; }
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor; }
+
+body {
+  font-family: var(--Font-Body);
+  min-height: 100vh;
+  background-color: var(--color-background-page);
+  line-height: 1.4em;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale; }
+
+.zoomTransition {
+  transition: transform 5s ease;
+  transform: scale(1.2); }
+
+#imgCarrousel2 {
+  filter: brightness(0.9);
+  height: 100vh; }
+
+#labelFirstSlide {
+  position: absolute;
+  top: 200px;
+  color: black;
+  right: 300px;
+  z-index: 2; }
+
+#navBarMenu {
+  height: 300px;
+  background-color: cornflowerblue; }
