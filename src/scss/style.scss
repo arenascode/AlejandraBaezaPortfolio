@@ -4,9 +4,10 @@
 // -----CARROUSEL-------//
 
 .zoomTransition {
-    transition: transform 5s ease;
+    transition: transform 7s ease;
     transform: scale(1.2);
 }
+
 #imgCarrousel2 {
   filter: brightness(0.9);
   height: 100vh;
@@ -18,7 +19,14 @@
   right: 300px;
   z-index: 2;
 }
-
+#carouselExampleCaptions {
+  .carousel-control-prev-icon {
+    background-color: black;
+  }
+  .carousel-control-next-icon {
+    background-color: black;
+  }
+}
 #navBarMenu {
   height: 300px;
   background-color: cornflowerblue;

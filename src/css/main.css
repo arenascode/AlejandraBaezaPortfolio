@@ -119,7 +119,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 .zoomTransition {
-  transition: transform 5s ease;
+  transition: transform 7s ease;
   transform: scale(1.2); }
 
 #imgCarrousel2 {
@@ -132,6 +132,12 @@ body {
   color: black;
   right: 300px;
   z-index: 2; }
+
+#carouselExampleCaptions .carousel-control-prev-icon {
+  background-color: black; }
+
+#carouselExampleCaptions .carousel-control-next-icon {
+  background-color: black; }
 
 #navBarMenu {
   height: 300px;
