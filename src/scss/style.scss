@@ -3,72 +3,152 @@
 // -----CARROUSEL-------//
 
 .zoomTransition {
-  transition: transform 7s ease;
+  transition: transform 8s ease;
   transform: scale(1.2);
 }
 
 #imgCarrousel {
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 // ----Captions Main Carousel -----
 .labelSlide {
+  display: flex;
+  flex-direction: column;
+  // gap: 5px;
+  align-items: flex-start;
   position: absolute;
-  top: 150px;
+  top: 125px;
   color: black;
   right: 300px;
   z-index: 2;
   color: white;
-  p {
+  .profesion-focus-in-expand {
     width: max-content;
     font-size: 18px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    -webkit-animation: focus-in-expand 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+      3.5s both;
+    animation: focus-in-expand 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 3.5s
+      both;
   }
-  .tracking-in-expand-fwd-bottom{
+  /**
+ * ----------------------------------------
+ * animation profesion-focus-in-expand
+ * ----------------------------------------
+ */
+  @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  .name-tracking-in-expand-fwd-bottom {
     font-size: 32px;
-    // font-style: italic;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    width: min-content;
     font-weight: 900;
     letter-spacing: 2.5px;
     color: white;
+    margin-bottom: 45px;
     -webkit-animation: tracking-in-expand-fwd-bottom 4s
       cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    animation: tracking-in-expand-fwd-bottom 4s
+    animation: tracking-in-expand-fwd-bottom 3.5s
       cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   /**
  * ----------------------------------------
- * animation tracking-in-expand-fwd-bottom
+ * animation name-tracking-in-expand-fwd-bottom
  * ----------------------------------------
  */
-@-webkit-keyframes tracking-in-expand-fwd-bottom {
+  @-webkit-keyframes tracking-in-expand-fwd-bottom {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(500px);
+      transform: translateZ(-700px) translateY(280px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd-bottom {
+    0% {
+      width: min-content;
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(500px);
+      transform: translateZ(-700px) translateY(280px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  .contactMeBtn-focus-in-expand {
+    -webkit-animation: focus-in-expand 1.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+      5s both;
+    animation: focus-in-expand 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) 5s both;
+  }
+  /**
+ * ----------------------------------------
+ * animation focus-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(280px);
-    opacity: 0;
-  }
-  40% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
   }
 }
-@keyframes tracking-in-expand-fwd-bottom {
+@keyframes focus-in-expand {
   0% {
     letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(280px);
-    opacity: 0;
-  }
-  40% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
-    
   }
 }
 }
