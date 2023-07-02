@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap");
 // Custom Properties
 
-:root {
-  //Colors
-  --color-background-page: #ffffff;
-  --color-titles-headers: #262626;
-  --color-contactMeBtn-MainSlider: #696969;
-  --color-cta-btn: #fd6500;
-  --color-contactMe-Bar: #f9f6f1;
-
-  //Fonts
-  --Font-Body: "Nunito Sans", sans-serif;
-  --Font-Titles: "Playfair Display", serif;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #181818;

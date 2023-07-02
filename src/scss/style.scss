@@ -1,5 +1,79 @@
 @import "./base";
 
+:root {
+  //Colors
+  --color-background-page: #ffffff;
+  --color-titles-headers: #262626;
+  --color-contactMeBtn-MainSlider: #696969;
+  --color-cta-btn: #fd6500;
+  --color-contactMe-Bar: #f9f6f1;
+  --color-modal-menu: #333;
+
+  //Fonts
+  --Font-Body: "Nunito Sans", sans-serif;
+  --Font-Titles: "Playfair Display", serif;
+}
+// ------ Mobile Design First (width:414px: iphone XR)
+
+// ----- NavBar ------ //
+#navBarMobile {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  height: max-content;
+  padding: 15px;
+  #menuModalBtn {
+    width: 32px;
+  }
+  #mobileMenu_modal {
+        display: none;
+        opacity: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 6;
+        background-color: #000;
+        background-color: rgba(0,0,0,0.4);
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition-property: opacity;
+        transition-duration: 0.7s;
+        transition-timing-function: ease-in-out;
+        .mobileMenu_content {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 60%;
+          background-color: var(--color-modal-menu);
+          z-index: 6;
+          #closeModalBtn {
+            height: 32px;
+            width: 32px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 10px;
+          }
+          .links_menu {
+            color: #ffffff;
+            margin-top: 130px;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            li a {
+              font-size: 20px;
+              letter-spacing: 1px;
+              color: #ffffff;
+              &:hover {
+                color: var(--color-cta-btn)
+              }
+            }
+          }
+        }
+  }
+}
 // -----CARROUSEL-------//
 
 .zoomTransition {
@@ -116,6 +190,11 @@
     }
   }
   .contactMeBtn-focus-in-expand {
+    width: max-content;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     -webkit-animation: focus-in-expand 1.5s cubic-bezier(0.39, 0.575, 0.565, 1)
       5s both;
     animation: focus-in-expand 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) 5s both;
@@ -161,7 +240,7 @@
     background-color: black;
   }
 }
-#navBarMenu {
+#navBarDesktop {
   height: 300px;
   background-color: cornflowerblue;
 }
