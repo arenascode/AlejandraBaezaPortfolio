@@ -114,6 +114,7 @@ svg {
 }
 
 body {
+  min-height: 100vh;
   font-family: var(--Font-Body);
   min-height: 100vh;
   background-color: var(--color-background-page);

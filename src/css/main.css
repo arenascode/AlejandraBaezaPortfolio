@@ -99,6 +99,7 @@ svg {
   fill: currentColor; }
 
 body {
+  min-height: 100vh;
   font-family: var(--Font-Body);
   min-height: 100vh;
   background-color: var(--color-background-page);
@@ -306,5 +307,35 @@ body {
   background-color: black; }
 
 #navBarDesktop {
+  display: none;
   height: 300px;
   background-color: cornflowerblue; }
+
+#aboutMe {
+  margin-top: 100px;
+  margin-bottom: 50px; }
+  #aboutMe .aboutMe_photoContainer {
+    margin: 0 50px 50px 15px;
+    position: relative; }
+    #aboutMe .aboutMe_photoContainer::after {
+      content: "";
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: #fd6500;
+      z-index: 1;
+      -webkit-transform: translate(30px, 50px);
+      -ms-transform: translate(30px, 50px);
+      -o-transform: translate(30px, 50px);
+      transform: translate(30px, 50px); }
+    #aboutMe .aboutMe_photoContainer img {
+      position: relative;
+      z-index: 2; }
+  #aboutMe .aboutMe_description {
+    padding: 20px; }
+    #aboutMe .aboutMe_description h2 {
+      margin: 20px 0;
+      font-size: 24px;
+      font-weight: 800; }
