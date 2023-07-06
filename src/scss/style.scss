@@ -81,8 +81,8 @@
   transform: scale(1.2);
 }
 
-#imgCarrousel {
-  filter: brightness(0.9);
+#imgCarrousel1 {
+  filter: brightness(0.95);
 }
 // ---- Captions Main Carousel -----
 .labelSlide {
@@ -91,13 +91,15 @@
   // gap: 5px;
   align-items: flex-start;
   position: absolute;
-  top: 125px;
+  top: 40px;
   color: black;
   right: 300px;
   z-index: 2;
   color: white;
+
   .profesion-focus-in-expand {
     width: max-content;
+    margin-bottom: 0.7rem;
     font-size: 18px;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -191,6 +193,7 @@
   }
   .contactMeBtn-focus-in-expand {
     width: max-content;
+    // margin-top: 10px;
     font-weight: 700;
     letter-spacing: 1px;
     border-color: white;
@@ -231,7 +234,13 @@
   }
 }
 }
-
+.labelSide2 {
+  @extend .labelSlide;
+  top: 70px;
+  button {
+    margin-top: 10px;
+  }
+}
 #carouselExampleCaptions {
   .carousel-control-prev-icon {
     background-color: black;

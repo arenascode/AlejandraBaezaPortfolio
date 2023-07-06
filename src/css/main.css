@@ -174,15 +174,15 @@ body {
   transition: transform 8s ease;
   transform: scale(1.2); }
 
-#imgCarrousel {
-  filter: brightness(0.9); }
+#imgCarrousel1 {
+  filter: brightness(0.95); }
 
-.labelSlide {
+.labelSlide, .labelSide2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  top: 125px;
+  top: 40px;
   color: black;
   right: 300px;
   z-index: 2;
@@ -202,8 +202,9 @@ body {
  * animation focus-in-expand
  * ----------------------------------------
  */ }
-  .labelSlide .profesion-focus-in-expand {
+  .labelSlide .profesion-focus-in-expand, .labelSide2 .profesion-focus-in-expand {
     width: max-content;
+    margin-bottom: 0.7rem;
     font-size: 18px;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -232,7 +233,7 @@ body {
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1; } }
-  .labelSlide .name-tracking-in-expand-fwd-bottom {
+  .labelSlide .name-tracking-in-expand-fwd-bottom, .labelSide2 .name-tracking-in-expand-fwd-bottom {
     font-size: 32px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     width: min-content;
@@ -269,7 +270,7 @@ body {
     -webkit-transform: translateZ(0) translateY(0);
     transform: translateZ(0) translateY(0);
     opacity: 1; } }
-  .labelSlide .contactMeBtn-focus-in-expand {
+  .labelSlide .contactMeBtn-focus-in-expand, .labelSide2 .contactMeBtn-focus-in-expand {
     width: max-content;
     font-weight: 700;
     letter-spacing: 1px;
@@ -299,6 +300,11 @@ body {
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1; } }
+
+.labelSide2 {
+  top: 70px; }
+  .labelSide2 button {
+    margin-top: 10px; }
 
 #carouselExampleCaptions .carousel-control-prev-icon {
   background-color: black; }

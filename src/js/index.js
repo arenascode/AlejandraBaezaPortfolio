@@ -1,32 +1,33 @@
 const carouselItems = document.querySelectorAll('.carousel-item')
 const sliderImgs = document.querySelectorAll('[data-name="imgSlider"]')
-
+const imgCarrousel1 = document.getElementById('imgCarrousel1')
 // -----Animation on img inside Main Slider--------
 
 function handleSlideTransition(e) {
   const currentSlide = e.target
-  const img = currentSlide.querySelector('[data-name="imgSlider"]');
-  console.log(img);
+  const currentImg = currentSlide.querySelector('[data-name="imgSlider"]');
   sliderImgs.forEach((slider) => {
-    slider.classList.remove('zoomTransition')
+    slider.classList.toggle('zoomTransition')
   })
-  
-  img.classList.add('zoomTransition')
+  currentImg.classList.add('zoomTransition')
 }
 
 carouselItems.forEach(slide =>
   slide.addEventListener('transitionend', handleSlideTransition)
 )
-document.addEventListener('DOMContentLoaded', handleSlideTransition)
+
+window.addEventListener('load', function () {
+  imgCarrousel1.classList.add('zoomTransition');
+})
 
 // -----Modal Menu Mobile ----
 
 const mobileMenu = document.getElementById("mobileMenu_modal");
-console.log(mobileMenu);
+
 const hamburguerBtn = document.getElementById("menuModalBtn");
-console.log(hamburguerBtn);
+
 const closeModalBtn = document.getElementById("closeModalBtn");
-console.log(closeModalBtn);
+;
 
 function openModalMenu() {
   mobileMenu.style.display = "block";
