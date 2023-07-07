@@ -345,3 +345,38 @@ body {
       margin: 20px 0;
       font-size: 24px;
       font-weight: 800; }
+  #aboutMe .aboutMe_statistics {
+    display: grid;
+    place-content: center;
+    gap: 30px; }
+    #aboutMe .aboutMe_statistics .roleFilms, #aboutMe .aboutMe_statistics .awardsAndNominations {
+      display: flex;
+      align-items: center;
+      gap: 50px; }
+      #aboutMe .aboutMe_statistics .roleFilms .roleFilms_sinceDate, #aboutMe .aboutMe_statistics .awardsAndNominations .roleFilms_sinceDate, #aboutMe .aboutMe_statistics .awardsAndNominations .awardsQuantity {
+        font-size: 34px;
+        font-weight: 700;
+        text-align: end;
+        font-family: var(--Font-Titles);
+        position: relative;
+        width: 35%; }
+        #aboutMe .aboutMe_statistics .roleFilms .roleFilms_sinceDate::after, #aboutMe .aboutMe_statistics .awardsAndNominations .roleFilms_sinceDate::after, #aboutMe .aboutMe_statistics .awardsAndNominations .awardsQuantity::after {
+          content: "";
+          background-color: #fd6500;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          position: absolute;
+          right: -25px;
+          top: 50%; }
+      #aboutMe .aboutMe_statistics .roleFilms .roleFilms_text, #aboutMe .aboutMe_statistics .awardsAndNominations .roleFilms_text {
+        font-size: 14px;
+        font-weight: 600;
+        font-style: italic;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: left;
+        width: 65%; }
+    #aboutMe .aboutMe_statistics .awardsAndNominations .awardsQuantity {
+      padding-right: 0px;
+      align-self: right; }

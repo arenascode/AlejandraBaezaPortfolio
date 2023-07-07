@@ -26,52 +26,52 @@
     width: 32px;
   }
   #mobileMenu_modal {
-        display: none;
-        opacity: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 6;
-        background-color: #000;
-        background-color: rgba(0,0,0,0.4);
-        position: fixed;
-        top: 0;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition-property: opacity;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+    .mobileMenu_content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 60%;
+      background-color: var(--color-modal-menu);
+      z-index: 6;
+      #closeModalBtn {
+        height: 32px;
+        width: 32px;
+        position: absolute;
         left: 0;
-        transition-property: opacity;
-        transition-duration: 0.7s;
-        transition-timing-function: ease-in-out;
-        .mobileMenu_content {
-          position: fixed;
-          top: 0;
-          left: 0;
-          height: 100vh;
-          width: 60%;
-          background-color: var(--color-modal-menu);
-          z-index: 6;
-          #closeModalBtn {
-            height: 32px;
-            width: 32px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            margin: 10px;
-          }
-          .links_menu {
-            color: #ffffff;
-            margin-top: 130px;
-            margin-left: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-            li a {
-              font-size: 20px;
-              letter-spacing: 1px;
-              color: #ffffff;
-              &:hover {
-                color: var(--color-cta-btn)
-              }
-            }
+        top: 0;
+        margin: 10px;
+      }
+      .links_menu {
+        color: #ffffff;
+        margin-top: 130px;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        li a {
+          font-size: 20px;
+          letter-spacing: 1px;
+          color: #ffffff;
+          &:hover {
+            color: var(--color-cta-btn);
           }
         }
+      }
+    }
   }
 }
 // -----CARROUSEL-------//
@@ -207,32 +207,32 @@
  * animation focus-in-expand
  * ----------------------------------------
  */
-@-webkit-keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
+  @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
-}
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
 }
 .labelSide2 {
   @extend .labelSlide;
@@ -260,27 +260,27 @@
 #aboutMe {
   margin-top: 80px;
   margin-bottom: 50px;
-  .aboutMe_photoContainer{
+  .aboutMe_photoContainer {
     margin: 0 50px 50px 15px;
     position: relative;
     &::after {
-    content: "";
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: #fd6500;
-    z-index: 1;
-    -webkit-transform: translate(30px, 50px);
-    -ms-transform: translate(30px, 50px);
-    -o-transform: translate(30px, 50px);
-    transform: translate(30px, 50px);
-  }
-  img {
-    position: relative;
-    z-index: 2;
-  }
+      content: "";
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: #fd6500;
+      z-index: 1;
+      -webkit-transform: translate(30px, 50px);
+      -ms-transform: translate(30px, 50px);
+      -o-transform: translate(30px, 50px);
+      transform: translate(30px, 50px);
+    }
+    img {
+      position: relative;
+      z-index: 2;
+    }
   }
   .aboutMe_description {
     padding: 20px;
@@ -290,5 +290,50 @@
       font-weight: 800;
     }
   }
+  .aboutMe_statistics {
+    display: grid;
+    place-content: center;
+    gap: 30px;
+    .roleFilms {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      .roleFilms_sinceDate {
+        font-size: 34px;
+        font-weight: 700;
+        text-align: end;
+        font-family: var(--Font-Titles);
+        position: relative;
+        // padding-right: 10px;
+        width: 35%;
+        &::after {
+          content: "";
+          background-color: #fd6500;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          position: absolute;
+          right: -25px;
+          top: 50%;
+        }
+      }
+      .roleFilms_text {
+        font-size: 14px;
+        font-weight: 600;
+        font-style: italic;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-align: left;
+        width: 65%;
+      }
+    }
+    .awardsAndNominations {
+      @extend .roleFilms;
+      .awardsQuantity {
+        @extend .roleFilms_sinceDate;
+        padding-right: 0px;
+        align-self: right;
+      }
+    }
+  }
 }
-
