@@ -1,7 +1,8 @@
+// -----Animation on img inside Main Slider--------
+
 const carouselItems = document.querySelectorAll('.carousel-item')
 const sliderImgs = document.querySelectorAll('[data-name="imgSlider"]')
 const imgCarrousel1 = document.getElementById('imgCarrousel1')
-// -----Animation on img inside Main Slider--------
 
 function handleSlideTransition(e) {
   const currentSlide = e.target
@@ -55,3 +56,20 @@ window.onclick = function (e) {
 hamburguerBtn.addEventListener("click", openModalMenu);
 
 closeModalBtn.addEventListener("click", closeModalMenu);
+
+// ----Animations of statistics About Me Section ----
+const sinceDate = document.querySelector('.roleFilms_sinceDate')
+const sinceDateTo = parseInt(sinceDate.dataset.to)
+const sinceDateFrom = parseInt(sinceDate.dataset.from)
+
+
+function displayCount(currentCount) {
+  sinceDate.innerHTML = currentCount;
+
+  if (currentCount < sinceDateTo) {
+    setTimeout(() => {
+      displayCount(currentCount + 1);
+    }, 5);
+  }
+}
+displayCount(sinceDateFrom)
