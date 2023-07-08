@@ -294,18 +294,20 @@
     display: grid;
     place-content: center;
     gap: 30px;
-    .roleFilms {
+    height: max-content;
+    margin-bottom: 20px;
+    .microSeries {
       display: flex;
       align-items: center;
-      gap: 50px;
-      .roleFilms_sinceDate {
+      gap: 60px;
+      .microSeries_quantity {
         font-size: 34px;
         font-weight: 700;
         text-align: end;
         font-family: var(--Font-Titles);
         position: relative;
         // padding-right: 10px;
-        width: 35%;
+        // width: 35%;
         &::after {
           content: "";
           background-color: #fd6500;
@@ -313,30 +315,43 @@
           width: 6px;
           border-radius: 50%;
           position: absolute;
-          right: -25px;
+          right: -35px;
           top: 50%;
         }
       }
-      .roleFilms_text {
+      .microSeries_text {
         font-size: 14px;
         font-weight: 600;
         font-style: italic;
         text-transform: uppercase;
         vertical-align: middle;
         text-align: left;
-        width: 65%;
+        width: 70%;
       }
     }
-    .awardsAndNominations {
-      @extend .roleFilms;
-      .awardsQuantity {
-        @extend .roleFilms_sinceDate;
-        padding-right: 0px;
-        align-self: right;
+    .theatrePlays {
+      @extend .microSeries;
+      .theatrePlays_quantity {
+        @extend .microSeries_quantity;
+      }
+      .theatrePlays_text {
+        @extend .microSeries_text;
       }
     }
-    .featureFilmsToDate {
-      @extend .roleFilms;
+    .shortFilms {
+      @extend .microSeries;
+      .shortFilms_quantity {
+        @extend .microSeries_quantity;
+        
+      }
+      .shortFilms_text {
+        @extend .microSeries_text;
+      }
     }
   }
+}
+
+// ------Projects Section 
+#projects {
+  min-height: 100vh;
 }

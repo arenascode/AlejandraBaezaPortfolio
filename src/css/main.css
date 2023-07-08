@@ -348,35 +348,36 @@ body {
   #aboutMe .aboutMe_statistics {
     display: grid;
     place-content: center;
-    gap: 30px; }
-    #aboutMe .aboutMe_statistics .roleFilms, #aboutMe .aboutMe_statistics .awardsAndNominations, #aboutMe .aboutMe_statistics .featureFilmsToDate {
+    gap: 30px;
+    height: max-content;
+    margin-bottom: 20px; }
+    #aboutMe .aboutMe_statistics .microSeries, #aboutMe .aboutMe_statistics .theatrePlays, #aboutMe .aboutMe_statistics .shortFilms {
       display: flex;
       align-items: center;
-      gap: 50px; }
-      #aboutMe .aboutMe_statistics .roleFilms .roleFilms_sinceDate, #aboutMe .aboutMe_statistics .awardsAndNominations .roleFilms_sinceDate, #aboutMe .aboutMe_statistics .featureFilmsToDate .roleFilms_sinceDate, #aboutMe .aboutMe_statistics .awardsAndNominations .awardsQuantity {
+      gap: 60px; }
+      #aboutMe .aboutMe_statistics .microSeries .microSeries_quantity, #aboutMe .aboutMe_statistics .theatrePlays .microSeries_quantity, #aboutMe .aboutMe_statistics .shortFilms .microSeries_quantity, #aboutMe .aboutMe_statistics .theatrePlays .theatrePlays_quantity, #aboutMe .aboutMe_statistics .shortFilms .shortFilms_quantity {
         font-size: 34px;
         font-weight: 700;
         text-align: end;
         font-family: var(--Font-Titles);
-        position: relative;
-        width: 35%; }
-        #aboutMe .aboutMe_statistics .roleFilms .roleFilms_sinceDate::after, #aboutMe .aboutMe_statistics .awardsAndNominations .roleFilms_sinceDate::after, #aboutMe .aboutMe_statistics .featureFilmsToDate .roleFilms_sinceDate::after, #aboutMe .aboutMe_statistics .awardsAndNominations .awardsQuantity::after {
+        position: relative; }
+        #aboutMe .aboutMe_statistics .microSeries .microSeries_quantity::after, #aboutMe .aboutMe_statistics .theatrePlays .microSeries_quantity::after, #aboutMe .aboutMe_statistics .shortFilms .microSeries_quantity::after, #aboutMe .aboutMe_statistics .theatrePlays .theatrePlays_quantity::after, #aboutMe .aboutMe_statistics .shortFilms .shortFilms_quantity::after {
           content: "";
           background-color: #fd6500;
           height: 6px;
           width: 6px;
           border-radius: 50%;
           position: absolute;
-          right: -25px;
+          right: -35px;
           top: 50%; }
-      #aboutMe .aboutMe_statistics .roleFilms .roleFilms_text, #aboutMe .aboutMe_statistics .awardsAndNominations .roleFilms_text, #aboutMe .aboutMe_statistics .featureFilmsToDate .roleFilms_text {
+      #aboutMe .aboutMe_statistics .microSeries .microSeries_text, #aboutMe .aboutMe_statistics .theatrePlays .microSeries_text, #aboutMe .aboutMe_statistics .shortFilms .microSeries_text, #aboutMe .aboutMe_statistics .theatrePlays .theatrePlays_text, #aboutMe .aboutMe_statistics .shortFilms .shortFilms_text {
         font-size: 14px;
         font-weight: 600;
         font-style: italic;
         text-transform: uppercase;
         vertical-align: middle;
         text-align: left;
-        width: 65%; }
-    #aboutMe .aboutMe_statistics .awardsAndNominations .awardsQuantity {
-      padding-right: 0px;
-      align-self: right; }
+        width: 70%; }
+
+#projects {
+  min-height: 100vh; }

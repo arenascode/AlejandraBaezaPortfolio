@@ -58,18 +58,87 @@ hamburguerBtn.addEventListener("click", openModalMenu);
 closeModalBtn.addEventListener("click", closeModalMenu);
 
 // ----Animations of statistics About Me Section ----
-const sinceDate = document.querySelector('.roleFilms_sinceDate')
-const sinceDateTo = parseInt(sinceDate.dataset.to)
-const sinceDateFrom = parseInt(sinceDate.dataset.from)
+// Statistics Container 
+const statisticsContainer = document.querySelector('.aboutMe_statistics')
+// --microSeriesQty
+const microSeriesQty = document.querySelector('.microSeries_quantity')
+const microSeriesQty_To = parseInt(microSeriesQty.dataset.to)
+const microSeriesQty_From = parseInt(microSeriesQty.dataset.from)
+// -- theatrePlaysQty
+const theatrePlaysQty = document.querySelector('.theatrePlays_quantity')
+const theatrePlaysQty_To = parseInt(theatrePlaysQty.dataset.to);
+const theatrePlaysQty_From = parseInt(theatrePlaysQty.dataset.from);
+//ShortFimlsQty
+const shortFilmsQty = document.querySelector(".shortFilms_quantity");
+const shortFilmsQty_To = parseInt(shortFilmsQty.dataset.to);
+const shortFilmsQty_From = parseInt(shortFilmsQty.dataset.from);
 
 
-function displayCount(currentCount) {
-  sinceDate.innerHTML = currentCount;
+// Microseries Count
+function displayCountMicroSeries(currentCount) {
+  microSeriesQty.innerHTML = currentCount;
 
-  if (currentCount < sinceDateTo) {
+  if (currentCount < microSeriesQty_To) {
     setTimeout(() => {
-      displayCount(currentCount + 1);
-    }, 5);
+      displayCountMicroSeries(currentCount + 1);
+    }, 200);
   }
 }
-displayCount(sinceDateFrom)
+
+//TheatrePlays Count
+function displayCountTheatrePlays(currentCount) {
+  theatrePlaysQty.innerHTML = currentCount;
+  
+  if (currentCount < theatrePlaysQty_To) {
+    setTimeout(() => {
+      displayCountTheatrePlays(currentCount + 1)
+    }, 200);
+  }
+}
+
+//ShortFIlms Count 
+function displayCountShortFilms(currentCount) {
+  shortFilmsQty.innerHTML = currentCount
+  
+  if (currentCount < shortFilmsQty_To) {
+    setTimeout(() => {
+    displayCountShortFilms(currentCount + 1)
+  }, 200);
+  }
+}
+
+let previousScrollPosition = window.scrollY
+let hasBeenActivated = false;
+
+function handleStatistics() {
+  const currentScrollPosition = window.scrollY;
+  const elementRect = statisticsContainer.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+  
+  if (
+    !hasBeenActivated &&
+    ((currentScrollPosition > previousScrollPosition &&
+      elementRect.top < viewportHeight) ||
+      (currentScrollPosition < previousScrollPosition &&
+        elementRect.bottom > 0))
+  ) {
+    displayCountMicroSeries(microSeriesQty_From);
+    displayCountTheatrePlays(theatrePlaysQty_From);
+    displayCountShortFilms(shortFilmsQty_From);
+
+    hasBeenActivated = true;
+  }
+
+  if (
+    hasBeenActivated &&
+    ((currentScrollPosition > previousScrollPosition &&
+      elementRect.top >= viewportHeight) ||
+      (currentScrollPosition < previousScrollPosition &&
+        elementRect.bottom <= 0))
+  ) {
+    hasBeenActivated = false;
+  }
+  previousScrollPosition = currentScrollPosition;
+}
+
+window.addEventListener('scroll', handleStatistics)
