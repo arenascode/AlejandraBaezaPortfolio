@@ -102,7 +102,6 @@ body {
   min-height: 100vh;
   font-family: var(--Font-Body);
   min-height: 100vh;
-  background-color: var(--color-background-page);
   line-height: 1.4em;
   /* opcional */
   -webkit-font-smoothing: antialiased;
@@ -110,7 +109,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 :root {
-  --color-background-page: #ffffff;
+  --color-background-body: #ffffff;
   --color-titles-headers: #262626;
   --color-contactMeBtn-MainSlider: #696969;
   --color-cta-btn: #fd6500;
@@ -118,6 +117,9 @@ body {
   --color-modal-menu: #333;
   --Font-Body: "Nunito Sans", sans-serif;
   --Font-Titles: "Playfair Display", serif; }
+
+body {
+  background-color: var(--color-background-body); }
 
 #navBarMobile {
   display: flex;
@@ -379,5 +381,26 @@ body {
         text-align: left;
         width: 70%; }
 
-#projects {
-  min-height: 100vh; }
+#recomendations {
+  width: 100%; }
+  #recomendations .carousel-item .card {
+    border: none;
+    margin-left: 55px;
+    text-align: center;
+    font-family: var(--Font-Titles);
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.8; }
+    #recomendations .carousel-item .card img {
+      width: 100px;
+      height: 100px;
+      margin: auto; }
+    #recomendations .carousel-item .card .card-body span {
+      font-style: normal;
+      font-weight: 800;
+      font-family: var(--Font-Body);
+      text-transform: uppercase;
+      color: #000; }
+  #recomendations button {
+    align-items: center; }

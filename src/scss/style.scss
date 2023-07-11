@@ -2,7 +2,7 @@
 
 :root {
   //Colors
-  --color-background-page: #ffffff;
+  --color-background-body: #ffffff;
   --color-titles-headers: #262626;
   --color-contactMeBtn-MainSlider: #696969;
   --color-cta-btn: #fd6500;
@@ -14,7 +14,9 @@
   --Font-Titles: "Playfair Display", serif;
 }
 // ------ Mobile Design First (width:414px: iphone XR)
-
+body {
+  background-color: var(--color-background-body);
+}
 // ----- NavBar ------ //
 #navBarMobile {
   display: flex;
@@ -352,6 +354,34 @@
 }
 
 // ------Projects Section 
-#projects {
-  min-height: 100vh;
+#recomendations {
+  width: 100%;
+  .carousel-item .card {
+    border: none;
+    margin-left: 55px;
+    text-align: center;
+    font-family: var(--Font-Titles);
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    img {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+    }
+    .card-body span {
+      font-style: normal;
+      font-weight: 800;
+      font-family: var(--Font-Body);
+      text-transform: uppercase;
+      color: #000;
+    }
+    // .card-body small {
+    //   text-wrap: nowrap;
+    // }
+  }
+  button {
+    align-items: center;
+  }
 }
