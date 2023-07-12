@@ -118,9 +118,6 @@ body {
   --Font-Body: "Nunito Sans", sans-serif;
   --Font-Titles: "Playfair Display", serif; }
 
-body {
-  background-color: var(--color-background-body); }
-
 #navBarMobile {
   display: flex;
   gap: 120px;
@@ -404,3 +401,17 @@ body {
       color: #000; }
   #recomendations button {
     align-items: center; }
+
+#videoIntroduction {
+  margin: 30px 0 300px 0;
+  height: 150px;
+  background-image: url(../assets/img/videoIntroductionBG.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; }
+  #videoIntroduction .player {
+    display: grid;
+    place-content: center;
+    padding-top: 80px;
+    width: 40%; }

@@ -14,9 +14,9 @@
   --Font-Titles: "Playfair Display", serif;
 }
 // ------ Mobile Design First (width:414px: iphone XR)
-body {
-  background-color: var(--color-background-body);
-}
+// body {
+//   background-color: var(--color-background-body);
+// }
 // ----- NavBar ------ //
 #navBarMobile {
   display: flex;
@@ -344,7 +344,6 @@ body {
       @extend .microSeries;
       .shortFilms_quantity {
         @extend .microSeries_quantity;
-        
       }
       .shortFilms_text {
         @extend .microSeries_text;
@@ -353,7 +352,7 @@ body {
   }
 }
 
-// ------Projects Section 
+// ------Projects Section
 #recomendations {
   width: 100%;
   .carousel-item .card {
@@ -383,5 +382,21 @@ body {
   }
   button {
     align-items: center;
+  }
+}
+
+#videoIntroduction {
+  margin: 30px 0 300px 0;
+  height: 150px;
+  background-image: url(../assets/img/videoIntroductionBG.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  .player {
+    display: grid;
+    place-content: center;
+    padding-top:80px;
+    width: 40%;
   }
 }

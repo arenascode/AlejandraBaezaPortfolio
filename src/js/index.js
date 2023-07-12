@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
   imgCarrousel1.classList.add('zoomTransition');
 })
 
-// -----Modal Menu Mobile ----
+// -----Modal Menu Mobile ----//
 
 const mobileMenu = document.getElementById("mobileMenu_modal");
 
@@ -57,7 +57,7 @@ hamburguerBtn.addEventListener("click", openModalMenu);
 
 closeModalBtn.addEventListener("click", closeModalMenu);
 
-// ----Animations of statistics About Me Section ----
+// ----Animations of statistics About Me Section ----//
 // Statistics Container 
 const statisticsContainer = document.querySelector('.aboutMe_statistics')
 // --microSeriesQty
@@ -142,3 +142,13 @@ function handleStatistics() {
 }
 
 window.addEventListener('scroll', handleStatistics)
+
+// ----- Parallax Effect in Video Introduction ----- //
+function handleParallax() {
+  const parallax = document.querySelector('.parallax')
+  let scrollPosition = window.scrollY
+  console.log(scrollPosition);
+  parallax.style.backgroundPositionY = scrollPosition * 0.01 + 'px'
+}
+
+// window.addEventListener('scroll', handleParallax)
