@@ -186,7 +186,7 @@
             </div>
           </div>
           <div class="carousel-item">
-                       <div class="card" style="width: 19rem">
+            <div class="card" style="width: 19rem">
               <img
                 src="./src/assets/img/AlexisSanchez.png"
                 class="card-img-top rounded-circle"
@@ -238,7 +238,8 @@
           class="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev" data-bs-theme="dark"
+          data-bs-slide="prev"
+          data-bs-theme="dark"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -247,7 +248,8 @@
           class="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next" data-bs-theme="dark"
+          data-bs-slide="next"
+          data-bs-theme="dark"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
@@ -255,10 +257,16 @@
       </div>
     </section>
     <section id="videoIntroduction" class="parallax">
-        <div class="player">
-          <div>PLAY ME </div>
-          <video src=""></video>
+      <div class="player">
+        <div class="player_icon">
+          <span>PLAY</span>
+          <button href="" class="player_iconPlay">
+            <img src="./src/assets/icons/tocar.png" alt=""/>
+          </button>
+          <span>REEL</span>
         </div>
+        <video src=""></video>
+      </div>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

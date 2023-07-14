@@ -403,6 +403,9 @@ body {
     align-items: center; }
 
 #videoIntroduction {
+  width: 100%;
+  display: grid;
+  place-content: center;
   margin: 30px 0 300px 0;
   height: 150px;
   background-image: url(../assets/img/videoIntroductionBG.jpg);
@@ -413,5 +416,28 @@ body {
   #videoIntroduction .player {
     display: grid;
     place-content: center;
-    padding-top: 80px;
-    width: 40%; }
+    width: 100%; }
+    #videoIntroduction .player .player_icon {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #f9f6f1;
+      font-family: var(--Font-Titles);
+      font-size: 28px;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: 1px; }
+      #videoIntroduction .player .player_icon .player_iconPlay {
+        height: 55px;
+        width: 55px;
+        border: solid 2px #f9f6f1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px; }
+        #videoIntroduction .player .player_icon .player_iconPlay img {
+          width: 28px;
+          margin-left: 3px; }
+    #videoIntroduction .player video {
+      display: none; }
