@@ -439,5 +439,38 @@ body {
         #videoIntroduction .player .player_icon .player_iconPlay img {
           width: 28px;
           margin-left: 3px; }
-    #videoIntroduction .player video {
-      display: none; }
+    #videoIntroduction .player .video_modalContainer {
+      width: 100%;
+      height: 100vh;
+      z-index: 99;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      transition-property: opacity;
+      transition-duration: 0.7s;
+      transition-timing-function: ease-in-out; }
+      #videoIntroduction .player .video_modalContainer .video_modalContent {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        padding-top: 50px;
+        background-color: rgba(0, 0, 0, 0.542);
+        z-index: 6; }
+        #videoIntroduction .player .video_modalContainer .video_modalContent #closeModalVideoBtn {
+          height: 22px;
+          width: 22px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          margin: 10px; }
+        #videoIntroduction .player .video_modalContainer .video_modalContent video {
+          width: 100%; }
