@@ -171,17 +171,8 @@ function closeVideoModal() {
     }, 500);
   document.body.style.overflow = "auto";
 }
-//-- To close Modal when user click Modal Content ----
-window.onclick = function (e) {
-  if (e.target === reelModalContent) {
-    reelModalContainer.style.opacity = 0;
-    setTimeout(() => {
-      reelModalContainer.style.display = "none";
-    }, 500);
-    document.body.style.overflow = "auto";
-  }
-};
+
 
 openVideoModalBtn.addEventListener('click', showVideoModal)
-// reelModalContent.addEventListener('click', closeVideoModal)
+reelModalContent.addEventListener('click', closeVideoModal)
 closeModalVideoBtn.addEventListener('click', closeVideoModal)
