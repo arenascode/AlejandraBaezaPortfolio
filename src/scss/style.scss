@@ -419,6 +419,9 @@
         align-items: center;
         justify-content: center;
         padding: 15px;
+        &:hover {
+          cursor: pointer;
+        }
         img {
           width: 28px;
           margin-left: 3px;
@@ -426,13 +429,13 @@
       }
     }
     .video_modalContainer {
-      //display: none
-      // opacity: 0;
+      display: none;
+      opacity: 0;
       width: 100%;
       height: 100vh;
       z-index: 99;
-      background-color: #000;
-      background-color: rgba(0, 0, 0, 0.4);
+      // background-color: #000;
+      background-color: rgba(0, 0, 0, 0.568);
       position: fixed;
       top: 0;
       left: 0;
@@ -442,28 +445,30 @@
       transition-duration: 0.7s;
       transition-timing-function: ease-in-out;
       .video_modalContent {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
+        // position: fixed;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
         top: 0;
         // left: 0;
         height: 100%;
         width: 100%;
-        padding: 5px;
-        padding-top: 50px;
+        padding: 3px;
+        padding-top: 180px;
          background-color: rgba(0, 0, 0, 0.542);
         z-index: 6;
         #closeModalVideoBtn {
           height: 22px;
           width: 22px;
           position: absolute;
-          left: 0;
-          top: 0;
+          right: 20px;
+          top: 130px;
           margin: 10px;
-        }
-        video {
-          width: 100%;
+          z-index: 6;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }

@@ -143,12 +143,45 @@ function handleStatistics() {
 
 window.addEventListener('scroll', handleStatistics)
 
-// ----- Parallax Effect in Video Introduction ----- //
-function handleParallax() {
-  const parallax = document.querySelector('.parallax')
-  let scrollPosition = window.scrollY
-  console.log(scrollPosition);
-  parallax.style.backgroundPositionY = scrollPosition * 0.01 + 'px'
-}
+// ----- Show Video Introduction----- //
 
-// window.addEventListener('scroll', handleParallax)
+const reelModalContainer = document.querySelector('.video_modalContainer')
+const reelModalContent = document.querySelector('.video_modalContent')
+const openVideoModalBtn = document.querySelector('.player_iconPlay');
+const closeModalVideoBtn = document.getElementById('closeModalVideoBtn')
+const videoIframe = document.querySelector('iframe')
+
+// --- To Open modal ---
+
+function showVideoModal() {
+  reelModalContainer.style.display = 'flex'
+  setTimeout(() => {
+    reelModalContainer.style.opacity = 1;
+  }, 10);
+  document.body.style.overflow = 'hidden'
+}
+// ---To close Modal with close Bttn ---
+
+// To stop video when close the modal
+
+function closeVideoModal() {
+    reelModalContainer.style.opacity = 0;
+    setTimeout(() => {
+      reelModalContainer.style.display = "none";
+    }, 500);
+  document.body.style.overflow = "auto";
+}
+//-- To close Modal when user click Modal Content ----
+window.onclick = function (e) {
+  if (e.target === reelModalContent) {
+    reelModalContainer.style.opacity = 0;
+    setTimeout(() => {
+      reelModalContainer.style.display = "none";
+    }, 500);
+    document.body.style.overflow = "auto";
+  }
+};
+
+openVideoModalBtn.addEventListener('click', showVideoModal)
+// reelModalContent.addEventListener('click', closeVideoModal)
+closeModalVideoBtn.addEventListener('click', closeVideoModal)
