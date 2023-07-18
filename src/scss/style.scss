@@ -396,11 +396,11 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  .player {
+  .playerContent {
     display: grid;
     place-content: center;
     width: 100%;
-    .player_icon {
+    .playerContent_icon {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -410,7 +410,7 @@
       font-weight: 500;
       font-style: italic;
       letter-spacing: 1px;
-      .player_iconPlay {
+      .playerContent_iconPlay {
         height: 55px;
         width: 55px;
         border: solid 2px #f9f6f1;

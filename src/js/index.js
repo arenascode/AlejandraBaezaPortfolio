@@ -147,7 +147,7 @@ window.addEventListener('scroll', handleStatistics)
 
 const reelModalContainer = document.querySelector('.video_modalContainer')
 const reelModalContent = document.querySelector('.video_modalContent')
-const openVideoModalBtn = document.querySelector('.player_iconPlay');
+const openVideoModalBtn = document.querySelector('.playerContent_iconPlay');
 const closeModalVideoBtn = document.getElementById('closeModalVideoBtn')
 const videoIframe = document.querySelector('iframe')
 
@@ -157,8 +157,9 @@ function showVideoModal() {
   reelModalContainer.style.display = 'flex'
   setTimeout(() => {
     reelModalContainer.style.opacity = 1;
-  }, 10);
-  document.body.style.overflow = 'hidden'
+    player.playVideo();
+  }, 200);
+  document.body.style.overflow = 'hidden';
 }
 // ---To close Modal with close Bttn ---
 
@@ -168,9 +169,42 @@ function closeVideoModal() {
     reelModalContainer.style.opacity = 0;
     setTimeout(() => {
       reelModalContainer.style.display = "none";
+      player.stopVideo();
     }, 500);
   document.body.style.overflow = "auto";
 }
+
+// -- To manage a YoutubeVideo -- //
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "390",
+    width: "640",
+    videoId: "yb4ovyv9xqU",
+    playerVars: {
+      playsinline: 1,
+    },
+    events: {
+      // 'onReady': onPlayerReady,
+      // 'onStateChange': onPlayerStateChange,
+    },
+  });
+}
+
+function stopVideo() {
+  console.log(player);
+  
+}
+
+// const stopVideoBtn = document.getElementById("stopVideoBtn");
+// stopVideoBtn.addEventListener("click", stopVideo);
 
 
 openVideoModalBtn.addEventListener('click', showVideoModal)

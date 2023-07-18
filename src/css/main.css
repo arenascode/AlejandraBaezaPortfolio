@@ -413,11 +413,11 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover; }
-  #videoIntroduction .player {
+  #videoIntroduction .playerContent {
     display: grid;
     place-content: center;
     width: 100%; }
-    #videoIntroduction .player .player_icon {
+    #videoIntroduction .playerContent .playerContent_icon {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -427,7 +427,7 @@ body {
       font-weight: 500;
       font-style: italic;
       letter-spacing: 1px; }
-      #videoIntroduction .player .player_icon .player_iconPlay {
+      #videoIntroduction .playerContent .playerContent_icon .playerContent_iconPlay {
         height: 55px;
         width: 55px;
         border: solid 2px #f9f6f1;
@@ -436,12 +436,12 @@ body {
         align-items: center;
         justify-content: center;
         padding: 15px; }
-        #videoIntroduction .player .player_icon .player_iconPlay:hover {
+        #videoIntroduction .playerContent .playerContent_icon .playerContent_iconPlay:hover {
           cursor: pointer; }
-        #videoIntroduction .player .player_icon .player_iconPlay img {
+        #videoIntroduction .playerContent .playerContent_icon .playerContent_iconPlay img {
           width: 28px;
           margin-left: 3px; }
-    #videoIntroduction .player .video_modalContainer {
+    #videoIntroduction .playerContent .video_modalContainer {
       display: none;
       opacity: 0;
       width: 100%;
@@ -456,7 +456,7 @@ body {
       transition-property: opacity;
       transition-duration: 0.7s;
       transition-timing-function: ease-in-out; }
-      #videoIntroduction .player .video_modalContainer .video_modalContent {
+      #videoIntroduction .playerContent .video_modalContainer .video_modalContent {
         position: relative;
         top: 0;
         height: 100%;
@@ -465,7 +465,7 @@ body {
         padding-top: 180px;
         background-color: rgba(0, 0, 0, 0.542);
         z-index: 6; }
-        #videoIntroduction .player .video_modalContainer .video_modalContent #closeModalVideoBtn {
+        #videoIntroduction .playerContent .video_modalContainer .video_modalContent #closeModalVideoBtn {
           height: 22px;
           width: 22px;
           position: absolute;
@@ -473,5 +473,5 @@ body {
           top: 130px;
           margin: 10px;
           z-index: 6; }
-          #videoIntroduction .player .video_modalContainer .video_modalContent #closeModalVideoBtn:hover {
+          #videoIntroduction .playerContent .video_modalContainer .video_modalContent #closeModalVideoBtn:hover {
             cursor: pointer; }
