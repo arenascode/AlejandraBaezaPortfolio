@@ -192,8 +192,6 @@ function onYouTubeIframeAPIReady() {
       playsinline: 1,
     },
     events: {
-      // 'onReady': onPlayerReady,
-      // 'onStateChange': onPlayerStateChange,
     },
   });
 }
