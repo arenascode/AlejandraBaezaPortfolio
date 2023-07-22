@@ -1,11 +1,12 @@
 // -----Animation on img inside Main Slider--------
 
-const carouselItems = document.querySelectorAll('.carousel-item')
+const carouselItems = document.querySelectorAll('[data-name="carouselItemIntro"]')
 const sliderImgs = document.querySelectorAll('[data-name="imgSlider"]')
 const imgCarrousel1 = document.getElementById('imgCarrousel1')
 
 function handleSlideTransition(e) {
   const currentSlide = e.target
+  console.log(currentSlide);
   const currentImg = currentSlide.querySelector('[data-name="imgSlider"]');
   sliderImgs.forEach((slider) => {
     slider.classList.toggle('zoomTransition')
