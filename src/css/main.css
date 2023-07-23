@@ -516,3 +516,6 @@ body {
         border-color: var(--color-cta-btn);
         background-color: var(--color-cta-btn);
         color: var(--color-background-body); }
+  #featuredFilms .featuredFilms_videos {
+    display: flex;
+    padding: 10px; }

@@ -62,7 +62,11 @@
           ></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-name="carouselItemIntro" data-bs-interval="8000">
+          <div
+            class="carousel-item active"
+            data-name="carouselItemIntro"
+            data-bs-interval="8000"
+          >
             <img
               id="imgCarrousel1"
               src="./src/assets/img/_GAB6407.jpg"
@@ -83,7 +87,11 @@
               </button>
             </div>
           </div>
-          <div class="carousel-item" data-name="carouselItemIntro" data-bs-interval="8000">
+          <div
+            class="carousel-item"
+            data-name="carouselItemIntro"
+            data-bs-interval="8000"
+          >
             <img
               src="./src/assets/img/_GAB6389.jpg"
               class="d-block w-100 min-vh-100 vh-100"
@@ -268,11 +276,9 @@
         <div class="video_modalContainer">
           <div class="video_modalContent">
             <button id="closeModalVideoBtn">
-              <img src="src/assets/icons/cancelar.png" alt=""/>
+              <img src="src/assets/icons/cancelar.png" alt="" />
             </button>
-            <div id="player">
-              
-            </div>
+            <div id="player"></div>
           </div>
         </div>
       </div>
@@ -283,14 +289,18 @@
         <p>una muestra de mi desempeño en escena</p>
       </div>
       <div class="featuredFilms_buttons">
-        <button type="button"
-                class="btn btn-outline-dark btn-sm rounded-pill">ALL</button>
-        <button type="button"
-                class="btn btn-outline-dark btn-sm rounded-pill">MICRO NOVELA</button>
-        <button type="button"
-                class="btn btn-outline-dark btn-sm rounded-pill">SHORT FILM</button>
-        <button type="button"
-                class="btn btn-outline-dark btn-sm rounded-pill">VIDEO CLIP</button>
+        <button type="button" class="btn btn-outline-dark btn-sm rounded-pill" data-filmType="all">
+          ALL
+        </button>
+        <button type="button" class="btn btn-outline-dark btn-sm rounded-pill" data-filmType="microNovela">
+          MICRO NOVELA
+        </button>
+        <button type="button" class="btn btn-outline-dark btn-sm rounded-pill" data-filmType="shortFilm">
+          SHORT FILM
+        </button>
+        <button type="button" class="btn btn-outline-dark btn-sm rounded-pill" data-filmType="videoClip">
+          VIDEO CLIP
+        </button>
       </div>
       <div class="featuredFilms_videos">Aqui van a ir los videos</div>
     </section>

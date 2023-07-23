@@ -201,10 +201,38 @@ function stopVideo() {
   
 }
 
-// const stopVideoBtn = document.getElementById("stopVideoBtn");
-// stopVideoBtn.addEventListener("click", stopVideo);
-
-
 openVideoModalBtn.addEventListener('click', showVideoModal)
 reelModalContent.addEventListener('click', closeVideoModal)
 closeModalVideoBtn.addEventListener('click', closeVideoModal)
+
+// ---- Featured Films Section --- //
+
+const featuredFilmsBtns = document.querySelectorAll('.featuredFilms_buttons button')
+const featuredFilmsView = document.querySelector('.featuredFilms_videos')
+
+function renderFilm() {
+
+}
+
+function selectFilm(e) {
+  let filmType = this.dataset.filmtype
+  switch (filmType) {
+    case 'all':
+      featuredFilmsView.innerHTML = `
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yb4ovyv9xqU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      break;
+    case 'microNovela':
+      
+      break;
+    case 'shortFilm':
+      
+      break;
+    case 'videoClip':
+      featuredFilmsView.innerHTML = `
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DESUB4NFWsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      break;
+  }
+}
+
+
+featuredFilmsBtns.forEach(btn => btn.addEventListener('click', selectFilm))
