@@ -207,7 +207,7 @@ closeModalVideoBtn.addEventListener("click", closeVideoModal);
 const featuredFilmsBtns = document.querySelectorAll(
   ".featuredFilms_buttons button"
 );
-const videoItems = document.querySelectorAll('.video_item')
+const videoItems = document.querySelectorAll(".video_item");
 
 window.addEventListener("load", () => {
   // Set default filter to "All" on page load
@@ -232,7 +232,73 @@ function applyFilter(filmType) {
       setTimeout(() => {
         item.classList.remove("visible");
       }, 20);
-      item.style.display = "none"
+      item.style.display = "none";
     }
   });
 }
+
+// To show each video in a modal
+
+const playBtnFilms = document.querySelectorAll(".iconPlayFeaturedFilms");
+const filmsPlayer = document.querySelector(".featuredFilmsPlayer");
+const featuredFilmsModal = document.querySelector(
+  ".featuredFilmsModalContainer"
+);
+const featuredFilmsContent = document.querySelector(
+  ".featuredFilmsModalContent"
+);
+console.log(featuredFilmsContent);
+const closefeaturedFilmsBtn = document.getElementById("closeFeaturedFilmsBtn");
+
+function openFeaturedFilmsModal() {
+  featuredFilmsModal.style.display = "flex";
+  setTimeout(() => {
+    featuredFilmsModal.style.opacity = 1;
+  }, 200);
+  document.body.style.overflow = "hidden";
+}
+
+function closefeaturedFilmsModal() {
+  featuredFilmsModal.style.opacity = 0;
+  setTimeout(() => {
+    featuredFilmsModal.style.display = "none";
+  }, 500);
+  document.body.style.overflow = "auto";
+}
+
+function showFeaturedFilms() {
+  const filmType = this.dataset.filmtype;
+  switch (filmType) {
+    case "microNovela":
+      filmsPlayer.innerHTML = "";
+      openFeaturedFilmsModal();
+
+      break;
+    case "shortFilm":
+      filmsPlayer.innerHTML = `
+      <div class="video_description">
+      <h3>Obsesiones</h3>
+      <p>SHORT FILM</p>
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yb4ovyv9xqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      setTimeout(() => {
+        openFeaturedFilmsModal();
+      }, 50);
+      break;
+    case "musicVideo":
+      openFeaturedFilmsModal();
+      filmsPlayer.innerHTML = `
+      <div class="video_description">
+      <h3>Me Perdiste</h3>
+      <p>MUSIC VIDEO</p>
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DESUB4NFWsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      break;
+  }
+}
+
+playBtnFilms.forEach((btnFilm) =>
+  btnFilm.addEventListener("click", showFeaturedFilms)
+);
+closefeaturedFilmsBtn.addEventListener("click", closefeaturedFilmsModal);
+featuredFilmsContent.addEventListener("click", closefeaturedFilmsModal);

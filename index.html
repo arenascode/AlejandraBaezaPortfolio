@@ -319,22 +319,14 @@
         </button>
       </div>
       <div class="featuredFilms_videos">
-        <div class="video_item microNovela" data-category="microNovela">
-          <div class="video_image">
-            <img src="./src/assets/img/img_videoKwait.png" alt="" />
-            <button href="" class="iconPlayFeaturedFilms">
-              <img src="./src/assets/icons/tocar.png" alt="" />
-            </button>
-          </div>
-          <div class="video_description">
-            <h3>Amor Ciego</h3>
-            <p>Micro Novela</p>
-          </div>
-        </div>
         <div class="video_item shortFilm" data-category="shortFilm">
           <div class="video_image">
             <img src="./src/assets/img/img_obsesiones.png" alt="" />
-            <button href="" class="iconPlayFeaturedFilms">
+            <button
+              href=""
+              class="iconPlayFeaturedFilms"
+              data-filmType="shortFilm"
+            >
               <img src="./src/assets/icons/tocar.png" alt="" />
             </button>
           </div>
@@ -343,10 +335,30 @@
             <p>Short Film</p>
           </div>
         </div>
+        <div class="video_item microNovela" data-category="microNovela">
+          <div class="video_image">
+            <img src="./src/assets/img/img_videoKwait.png" alt="" />
+            <button
+              href=""
+              class="iconPlayFeaturedFilms"
+              data-filmType="microNovela"
+            >
+              <img src="./src/assets/icons/tocar.png" alt="" />
+            </button>
+          </div>
+          <div class="video_description">
+            <h3>Amor Ciego</h3>
+            <p>Micro Novela</p>
+          </div>
+        </div>
         <div class="video_item videoClip" data-category="videoClip">
           <div class="video_image">
             <img src="./src/assets/img/img_videoClip.png" alt="" />
-            <button href="" class="iconPlayFeaturedFilms">
+            <button
+              href=""
+              class="iconPlayFeaturedFilms"
+              data-filmType="musicVideo"
+            >
               <img src="./src/assets/icons/tocar.png" alt="" />
             </button>
           </div>
@@ -354,6 +366,14 @@
             <h3>Me perdiste</h3>
             <p>Music Video</p>
           </div>
+        </div>
+      </div>
+      <div class="featuredFilmsModalContainer">
+        <div class="featuredFilmsModalContent">
+          <button id="closeFeaturedFilmsBtn">
+            <img src="src/assets/icons/cancelar.png" alt="" />
+          </button>
+          <div class="featuredFilmsPlayer"></div>
         </div>
       </div>
     </section>
