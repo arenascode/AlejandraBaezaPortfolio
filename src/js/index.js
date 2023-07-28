@@ -270,9 +270,15 @@ function showFeaturedFilms() {
   const filmType = this.dataset.filmtype;
   switch (filmType) {
     case "microNovela":
-      filmsPlayer.innerHTML = "";
-      openFeaturedFilmsModal();
-
+      filmsPlayer.innerHTML = `
+      <div class="video_description">
+      <h3>Amor Ciego</h3>
+      <p>MICRO NOVELA</p>
+      </div>
+      `;
+      setTimeout(() => {
+        openFeaturedFilmsModal();
+      }, 50);
       break;
     case "shortFilm":
       filmsPlayer.innerHTML = `
