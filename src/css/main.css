@@ -109,14 +109,17 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 :root {
-  --color-background-body: #ffffff;
+  --color-background-body: #f4f3f4;
   --color-titles-headers: #262626;
   --color-contactMeBtn-MainSlider: #696969;
   --color-cta-btn: #fd6500;
-  --color-contactMe-Bar: #f9f6f1;
+  --color-contactMe-Bar: #ece5da;
   --color-modal-menu: #333;
   --Font-Body: "Nunito Sans", sans-serif;
   --Font-Titles: "Playfair Display", serif; }
+
+body {
+  background-color: var(--color-background-body); }
 
 #navBarMobile {
   display: flex;
@@ -702,3 +705,29 @@ body {
     grid-area: img7; }
   #instagramSection .img8 {
     grid-area: img8; }
+
+#meansOfContact {
+  display: grid;
+  place-content: center;
+  background-image: url(../assets/img/footer-bg-round.png);
+  background-position: top; }
+  #meansOfContact .meansOfContact_mainPhoto {
+    margin: 50px 12px 50px 35px;
+    width: 354px;
+    height: 497px;
+    position: relative; }
+    #meansOfContact .meansOfContact_mainPhoto img {
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 10px 15px 0 rgba(51, 51, 51, 0.25);
+      transition: all 0.3s; }
+      #meansOfContact .meansOfContact_mainPhoto img:hover {
+        transform: translate(-30px, 40px); }
+    #meansOfContact .meansOfContact_mainPhoto::after {
+      content: "";
+      background-color: #00000030;
+      position: absolute;
+      left: -30px;
+      bottom: -40px;
+      height: 60%;
+      width: 80%; }
