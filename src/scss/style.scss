@@ -778,8 +778,9 @@ body {
   // height: 450px
   background-image: url(../assets/img/footer-bg-round.png);
   background-position: top;
+  // margin-bottom: 30px;
   .meansOfContact_mainPhoto {
-    margin: 50px 12px 50px 35px;
+    margin: 50px 10px 50px 35px;
     width: 354px;
     height: 497px;
     position: relative;
@@ -789,7 +790,7 @@ body {
       box-shadow: 0 10px 15px 0 rgba(51, 51, 51, 0.25);
       transition: all 0.3s;
       &:hover {
-        transform: translate(-30px, 40px);
+        transform: translate(-25px, 40px);
       }
     }
     &::after {
@@ -797,10 +798,39 @@ body {
       background-color:#00000030;
       // background-color: #ababab;
       position: absolute;
-      left: -30px;
+      left: -25px;
       bottom: -40px;
       height: 60%;
       width: 80%;
+    }
+  }
+  .meansOfContact_socialMedia {
+    margin-top: 50px;
+    display: grid;
+    place-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    .contactToMail {
+      display: grid;
+      place-content: center;
+      h2 {
+        font-style: italic;
+        color:#ababab;
+        font-family: var(--Font-Body);
+        letter-spacing: 2px;
+        text-align: left;
+        margin-bottom: 20px;
+        line-height: 1.3;
+      }
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        font-family: var(--Font-Titles);
+        letter-spacing: 0.8px;
+        a {
+          color:#262626;
+        }
+      }
     }
   }
 }
