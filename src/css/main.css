@@ -633,12 +633,13 @@ body {
 #hireMeSection {
   display: flex;
   flex-direction: column;
+  height: 180px;
   gap: 20px;
   justify-content: space-around;
   align-items: center;
   vertical-align: middle;
   padding: 20px;
-  margin-bottom: 200px;
+  margin-bottom: 60px;
   background-color: var(--color-contactMe-Bar); }
   #hireMeSection p {
     margin-bottom: 0;
@@ -649,8 +650,8 @@ body {
     background-color: var(--color-cta-btn);
     color: var(--color-background-body);
     border-color: var(--color-cta-btn);
-    padding: 8px;
-    width: 30%;
+    padding: 10px;
+    width: 35%;
     font-size: large;
     font-weight: 900; }
     #hireMeSection a:hover {
@@ -658,3 +659,46 @@ body {
       background-color: transparent;
       border: 2px solid #e0e0e0;
       color: var(--color-cta-btn); }
+
+#instagramSection {
+  display: grid;
+  place-content: center; }
+  #instagramSection .titleAndAccount {
+    display: grid;
+    justify-items: center; }
+    #instagramSection .titleAndAccount h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 25px; }
+    #instagramSection .titleAndAccount a {
+      font-style: italic;
+      font-size: 16px;
+      color: var(--color-titles-headers); }
+      #instagramSection .titleAndAccount a:hover {
+        cursor: pointer;
+        color: var(--color-cta-btn); }
+  #instagramSection .photoGalery {
+    display: grid;
+    grid-template-areas: 'img1 img2' 'img3 img4' 'img5 img6' 'img7 img8';
+    gap: 7px;
+    margin: 15px 10px; }
+    #instagramSection .photoGalery .img {
+      width: 182px;
+      height: 182px;
+      object-fit: fill; }
+  #instagramSection .img1 {
+    grid-area: img1; }
+  #instagramSection .img2 {
+    grid-area: img2; }
+  #instagramSection .img3 {
+    grid-area: img3; }
+  #instagramSection .img4 {
+    grid-area: img4; }
+  #instagramSection .img5 {
+    grid-area: img5; }
+  #instagramSection .img6 {
+    grid-area: img6; }
+  #instagramSection .img7 {
+    grid-area: img7; }
+  #instagramSection .img8 {
+    grid-area: img8; }

@@ -247,7 +247,6 @@ const featuredFilmsModal = document.querySelector(
 const featuredFilmsContent = document.querySelector(
   ".featuredFilmsModalContent"
 );
-console.log(featuredFilmsContent);
 const closefeaturedFilmsBtn = document.getElementById("closeFeaturedFilmsBtn");
 
 function openFeaturedFilmsModal() {
