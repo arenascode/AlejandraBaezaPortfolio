@@ -123,10 +123,23 @@ body {
 
 #navBarMobile {
   display: flex;
-  gap: 120px;
+  gap: 50px;
   align-items: center;
   height: max-content;
-  padding: 15px; }
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100vw;
+  background-color: var(--color-background-body);
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1); }
+  #navBarMobile .navBarTitle {
+    font-family: var(--Font-Titles);
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-style: italic; }
+    #navBarMobile .navBarTitle small {
+      font-size: 13px; }
   #navBarMobile #menuModalBtn {
     width: 32px; }
   #navBarMobile #mobileMenu_modal {
@@ -150,7 +163,7 @@ body {
       height: 100vh;
       width: 60%;
       background-color: var(--color-modal-menu);
-      z-index: 6; }
+      z-index: 9; }
       #navBarMobile #mobileMenu_modal .mobileMenu_content #closeModalBtn {
         height: 32px;
         width: 32px;
@@ -171,6 +184,9 @@ body {
           color: #ffffff; }
           #navBarMobile #mobileMenu_modal .mobileMenu_content .links_menu li a:hover {
             color: var(--color-cta-btn); }
+
+#carrouselIntro {
+  margin-top: 63px; }
 
 .zoomTransition {
   transition: transform 8s ease;
@@ -391,7 +407,8 @@ body {
     font-style: italic;
     font-size: 16px;
     letter-spacing: 2px;
-    line-height: 1.8; }
+    line-height: 1.8;
+    background-color: var(--color-background-body); }
     #recomendations .carousel-item .card img {
       width: 100px;
       height: 100px;
@@ -682,7 +699,7 @@ body {
         color: var(--color-cta-btn); }
   #instagramSection .photoGalery {
     display: grid;
-    grid-template-areas: 'img1 img2' 'img3 img4' 'img5 img6' 'img7 img8';
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8";
     gap: 7px;
     margin: 15px 10px; }
     #instagramSection .photoGalery .img {
@@ -710,7 +727,8 @@ body {
   display: grid;
   place-content: center;
   background-image: url(../assets/img/footer-bg-round.png);
-  background-position: top; }
+  background-position: top;
+  margin-bottom: 30px; }
   #meansOfContact .meansOfContact_mainPhoto {
     margin: 50px 10px 50px 35px;
     width: 354px;
@@ -755,3 +773,6 @@ body {
         letter-spacing: 0.8px; }
         #meansOfContact .meansOfContact_socialMedia .contactToMail p a {
           color: #262626; }
+          #meansOfContact .meansOfContact_socialMedia .contactToMail p a:hover {
+            cursor: pointer;
+            color: var(--color-cta-btn); }

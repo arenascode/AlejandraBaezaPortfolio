@@ -17,22 +17,25 @@
       <button id="menuModalBtn">
         <img src="./src/assets/icons/menu.png" />
       </button>
-      <!-- <div>Ale Logo</div> -->
+      <div class="navBarTitle">
+        Alejandra Baeza <small> Actriz / Modelo</small>
+      </div>
       <div id="mobileMenu_modal">
         <div class="mobileMenu_content">
           <button id="closeModalBtn">
             <img src="src/assets/icons/cancelar.png" alt="" />
           </button>
           <ul class="links_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#whoIAm">Sobre Mí</a></li>
-            <li><a href="#section4">Galeria</a></li>
-            <li><a href="#contactMe">Contactame</a></li>
+            <li><a href="#navBarMobile">Home</a></li>
+            <li><a href="#aboutMe">Sobre Mí</a></li>
+            <li><a href="#featuredFilms">Actuaciones</a></li>
+            <li><a href="#instagramSection">Galeria</a></li>
+            <li><a href="#meansOfContact">Contactame</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <section id="CarrouselIntro">
+    <section id="carrouselIntro">
       <div
         id="carouselExampleCaptions"
         class="carousel slide carousel-fade"
@@ -79,12 +82,13 @@
               <h1 class="name-tracking-in-expand-fwd-bottom">
                 ALEJANDRA BAEZA
               </h1>
-              <button
+              <a
+                href="mailto:alejandramejia244@gmail.com"
                 type="button"
                 class="btn btn-outline-light rounded-pill contactMeBtn-focus-in-expand"
               >
                 Contactame
-              </button>
+              </a>
             </div>
           </div>
           <div
@@ -103,12 +107,13 @@
               <h1 class="name-tracking-in-expand-fwd-bottom">
                 ALEJANDRA BAEZA
               </h1>
-              <button
+              <a
+                href="mailto:alejandramejia244@gmail.com"
                 type="button"
                 class="btn btn-outline-light rounded-pill contactMeBtn-focus-in-expand"
               >
                 Contactame
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -136,9 +141,6 @@
     <section id="aboutMe">
       <div class="aboutMe_photoContainer">
         <img src="./src/assets/img/img_aboutMe.png" alt="" />
-        <!-- <div class="aboutMe_photoBg">
-
-        </div> -->
       </div>
       <div class="aboutMe_description">
         <h2>La Joven Actriz Más Talentosa De América Latina</h2>
@@ -378,32 +380,71 @@
       </div>
     </section>
     <section id="hireMeSection">
-    <p>Hagamos algo grande juntos!</p>
-      <a href="" class="btn btn-outline-dark btn-sm rounded-pill">Contratame</a>
+      <p>Hagamos algo grande juntos!</p>
+      <a
+        href="mailto:alejandramejia244@gmail.com"
+        class="btn btn-outline-dark btn-sm rounded-pill"
+        >Contratame</a
+      >
     </section>
     <section id="instagramSection">
       <div class="titleAndAccount">
         <h2>Sigueme en instagram</h2>
-        <small><a href="https://www.instagram.com/alebaeza95" target="_blank">@alebaeza95</a></small>
+        <small
+          ><a href="https://www.instagram.com/alebaeza95" target="_blank"
+            >@alebaeza95</a
+          ></small
+        >
       </div>
       <div class="photoGalery">
-        <img src="./src/assets/img/IGphotos/img1.jpg" alt="" class="img img1"><img src="./src/assets/img/IGphotos/img2.jpg" alt="" class="img img2"><img src="./src/assets/img/IGphotos/img3.jpg" alt="" class="img img3"><img src="./src/assets/img/IGphotos/img4.jpg" alt="" class="img img4"><img src="./src/assets/img/IGphotos/img5.jpg" alt="" class="img img5"><img src="./src/assets/img/IGphotos/img6.jpg" class="img img6"><img src="./src/assets/img/IGphotos/img7.jpg" alt="" class="img img7"><img src="./src/assets/img/IGphotos/img8.jpg" alt="" class="img img8">
+        <img
+          src="./src/assets/img/IGphotos/img1.jpg"
+          alt=""
+          class="img img1"
+        /><img
+          src="./src/assets/img/IGphotos/img2.jpg"
+          alt=""
+          class="img img2"
+        /><img
+          src="./src/assets/img/IGphotos/img3.jpg"
+          alt=""
+          class="img img3"
+        /><img
+          src="./src/assets/img/IGphotos/img4.jpg"
+          alt=""
+          class="img img4"
+        /><img
+          src="./src/assets/img/IGphotos/img5.jpg"
+          alt=""
+          class="img img5"
+        /><img src="./src/assets/img/IGphotos/img6.jpg" class="img img6" /><img
+          src="./src/assets/img/IGphotos/img7.jpg"
+          alt=""
+          class="img img7"
+        /><img
+          src="./src/assets/img/IGphotos/img8.jpg"
+          alt=""
+          class="img img8"
+        />
       </div>
     </section>
     <section id="meansOfContact">
       <div class="meansOfContact_mainPhoto">
-        <img src="./src/assets/img/footer-actor.jpg" alt="">
+        <img src="./src/assets/img/footer-actor.jpg" alt="" />
       </div>
       <div class="meansOfContact_socialMedia">
-      <div class="contactToMail">
-        <h2>TIENES UN NUEVO PROYECTO? ENVIAME UN MENSAJE A</h2>
-        <p><a href="mailto:alejandramejia244@gmail.com">alejandramejia244@gmail.com</a></p>
-        <div class="socialMedia_buttons">
-          
+        <div class="contactToMail">
+          <h2>TIENES UN NUEVO PROYECTO? ENVIAME UN MENSAJE A</h2>
+          <p>
+            <a href="mailto:alejandramejia244@gmail.com"
+              >alejandramejia244@gmail.com</a
+            >
+          </p>
+          <div class="socialMedia_buttons"></div>
         </div>
       </div>
-      </div>
     </section>
+    <footer id="footer"></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
