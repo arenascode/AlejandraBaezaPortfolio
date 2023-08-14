@@ -727,8 +727,7 @@ body {
   display: grid;
   place-content: center;
   background-image: url(../assets/img/footer-bg-round.png);
-  background-position: top;
-  margin-bottom: 30px; }
+  background-position: top; }
   #meansOfContact .meansOfContact_mainPhoto {
     margin: 50px 10px 50px 35px;
     width: 354px;
@@ -776,3 +775,21 @@ body {
           #meansOfContact .meansOfContact_socialMedia .contactToMail p a:hover {
             cursor: pointer;
             color: var(--color-cta-btn); }
+  #meansOfContact .footer {
+    padding-top: 40px;
+    display: grid;
+    place-content: center;
+    background-color: transparent; }
+    #meansOfContact .footer .linksContent {
+      display: flex;
+      gap: 10px;
+      padding-left: 0; }
+      #meansOfContact .footer .linksContent a {
+        color: #ababab;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.45); }
+        #meansOfContact .footer .linksContent a:hover {
+          color: var(--color-cta-btn);
+          cursor: pointer; }
