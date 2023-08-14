@@ -776,7 +776,7 @@ body {
             cursor: pointer;
             color: var(--color-cta-btn); }
   #meansOfContact .footer {
-    padding-top: 40px;
+    margin-top: 40px;
     display: grid;
     place-content: center;
     background-color: transparent; }
