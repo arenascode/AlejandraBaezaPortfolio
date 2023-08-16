@@ -349,14 +349,13 @@ body {
       bottom: 20px;
       right: 6px;
       background: #fd6500;
-      z-index: 1;
-      -webkit-transform: translate(30px, 50px);
-      -ms-transform: translate(30px, 50px);
-      -o-transform: translate(30px, 50px);
-      transform: translate(30px, 50px); }
+      z-index: 1; }
     #aboutMe .aboutMe_photoContainer img {
       position: relative;
-      z-index: 2; }
+      z-index: 2;
+      transition: all 0.3s; }
+      #aboutMe .aboutMe_photoContainer img:hover {
+        transform: translate(24px, 30px); }
   #aboutMe .aboutMe_description {
     padding: 20px; }
     #aboutMe .aboutMe_description h2 {
@@ -424,8 +423,6 @@ body {
 
 #videoIntroduction {
   width: 100%;
-  display: grid;
-  place-content: center;
   margin: 30px 0 50px 0;
   height: 150px;
   background-image: url(../assets/img/videoIntroductionBG.jpg);
@@ -436,7 +433,8 @@ body {
   #videoIntroduction .playerContent {
     display: grid;
     place-content: center;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     #videoIntroduction .playerContent .playerContent_icon {
       display: flex;
       align-items: center;
