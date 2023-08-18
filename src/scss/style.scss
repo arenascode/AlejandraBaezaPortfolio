@@ -1378,9 +1378,9 @@ body {
   margin: 30px 0 50px 0;
   height: 200px;
   background-image: url(../assets/img/videoIntroductionBG.jpg);
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   .playerContent {
     display: grid;
