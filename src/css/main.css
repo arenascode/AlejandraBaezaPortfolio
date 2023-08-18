@@ -833,7 +833,7 @@ body {
             height: 18px;
             width: 20px; } }
 
-@media (max-width: 799px) and (min-width: 481px) {
+@media (max-width: 811px) and (min-width: 481px) {
   #navBarMobile {
     display: flex;
     gap: 115px;
@@ -1554,7 +1554,7 @@ body {
             height: 18px;
             width: 20px; } }
 
-@media (min-width: 800px) {
+@media (min-width: 812px) {
   #navBarMobile {
     display: flex;
     gap: 50px;
