@@ -597,14 +597,18 @@ body {
             position: absolute;
             top: 45%;
             right: 43%;
-            height: 36px;
+            height: 50px;
+            width: 50px;
             border: solid 1px #f9f6f1;
             border-radius: 50%;
-            padding: 8px 8px 8px 10px;
+            padding: 10px 10px 8px 10px;
             transition: display 0.5s ease; }
             #featuredFilms .featuredFilms_videos .video_item .video_image button:hover {
               cursor: pointer;
               border-color: var(--color-cta-btn); }
+            #featuredFilms .featuredFilms_videos .video_item .video_image button img {
+              object-fit: fill;
+              padding-left: 3px; }
         #featuredFilms .featuredFilms_videos .video_item .video_image::before {
           content: "";
           position: absolute;
