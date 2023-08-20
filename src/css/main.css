@@ -323,7 +323,7 @@ body {
     background-color: cornflowerblue; }
   #aboutMe {
     margin-top: 80px;
-    margin-bottom: 50px; }
+    margin-bottom: 20px; }
     #aboutMe .aboutMe_photoContainer {
       margin: 0 50px 50px 15px;
       position: relative; }
@@ -343,7 +343,8 @@ body {
         #aboutMe .aboutMe_photoContainer img:hover {
           transform: translate(24px, 30px); }
     #aboutMe .aboutMe_description {
-      padding: 20px; }
+      padding: 20px;
+      margin-bottom: 20px; }
       #aboutMe .aboutMe_description h2 {
         margin: 20px 0;
         font-size: 24px;
@@ -353,7 +354,7 @@ body {
       place-content: center;
       gap: 30px;
       height: max-content;
-      margin-bottom: 20px; }
+      margin-bottom: 50px; }
       #aboutMe .aboutMe_statistics .microSeries {
         display: flex;
         align-items: center;
@@ -453,6 +454,7 @@ body {
         margin: auto; }
       #recomendations .carousel-item .card .card-body span {
         font-style: normal;
+        font-size: 16px;
         font-weight: 800;
         font-family: var(--Font-Body);
         text-transform: uppercase;
@@ -768,13 +770,14 @@ body {
     #meansOfContact .meansOfContact_mainPhoto {
       margin: auto;
       width: 354px;
-      height: 497px;
+      height: 450px;
       position: relative; }
       #meansOfContact .meansOfContact_mainPhoto img {
         position: relative;
         z-index: 2;
         box-shadow: 0 10px 15px 0 rgba(51, 51, 51, 0.25);
-        transition: all 0.3s; }
+        transition: all 0.3s;
+        height: 100%; }
         #meansOfContact .meansOfContact_mainPhoto img:hover {
           transform: translate(-25px, 40px); }
       #meansOfContact .meansOfContact_mainPhoto::after {
@@ -782,11 +785,11 @@ body {
         background-color: #00000030;
         position: absolute;
         left: -25px;
-        bottom: -15px;
+        bottom: -40px;
         height: 60%;
         width: 80%; }
     #meansOfContact .meansOfContact_socialMedia {
-      margin-top: 80px;
+      margin-top: 100px;
       display: grid;
       place-content: center;
       padding-left: 20px;

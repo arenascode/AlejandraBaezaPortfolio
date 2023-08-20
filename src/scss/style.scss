@@ -280,7 +280,7 @@ body {
   // ------ About Me section -------
   #aboutMe {
     margin-top: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     .aboutMe_photoContainer {
       margin: 0 50px 50px 15px;
       position: relative;
@@ -305,6 +305,7 @@ body {
     }
     .aboutMe_description {
       padding: 20px;
+      margin-bottom: 20px;
       h2 {
         margin: 20px 0;
         font-size: 24px;
@@ -316,7 +317,7 @@ body {
       place-content: center;
       gap: 30px;
       height: max-content;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       .microSeries {
         display: flex;
         align-items: center;
@@ -438,6 +439,7 @@ body {
       }
       .card-body span {
         font-style: normal;
+        font-size: 16px;
         font-weight: 800;
         font-family: var(--Font-Body);
         text-transform: uppercase;
@@ -847,13 +849,14 @@ body {
     .meansOfContact_mainPhoto {
       margin: auto;
       width: 354px;
-      height: 497px;
+      height: 450px;
       position: relative;
       img {
         position: relative;
         z-index: 2;
         box-shadow: 0 10px 15px 0 rgba(51, 51, 51, 0.25);
         transition: all 0.3s;
+        height: 100%;
         &:hover {
           transform: translate(-25px, 40px);
         }
@@ -864,13 +867,13 @@ body {
         // background-color: #ababab;
         position: absolute;
         left: -25px;
-        bottom: -15px;
+        bottom: -40px;
         height: 60%;
         width: 80%;
       }
     }
     .meansOfContact_socialMedia {
-      margin-top: 80px;
+      margin-top: 100px;
       display: grid;
       place-content: center;
       padding-left: 20px;
