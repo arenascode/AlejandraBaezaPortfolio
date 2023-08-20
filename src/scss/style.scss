@@ -2,12 +2,12 @@
 
 :root {
   //Colors
-  --color-background-body: #f4f3f4;
+  --color-background-body: #26292b;
   // #26292b for darkMode BG
-  --color-titles-headers: #262626;
+  --color-titles-headers: #D1CDC7;
   --color-contactMeBtn-MainSlider: #696969;
   --color-cta-btn: #fd6500;
-  --color-contactMe-Bar: #ece5da;
+  --color-contactMe-Bar: #af7f6ab7;
   --color-modal-menu: #333;
 
   //Fonts
@@ -17,6 +17,9 @@
 // ------ Mobile Design First (width:414px: iphone XR)
 body {
   background-color: var(--color-background-body);
+  color: var(--color-titles-headers);
+  p {
+  color: var(--color-titles-headers) }
 }
 @media (max-width: 480px) {
   // ----- NavBar ------ //
@@ -432,6 +435,7 @@ body {
       letter-spacing: 2px;
       line-height: 1.8;
       background-color: var(--color-background-body);
+      color: --color-titles-headers;
       img {
         width: 100px;
         height: 100px;
@@ -443,11 +447,11 @@ body {
         font-weight: 800;
         font-family: var(--Font-Body);
         text-transform: uppercase;
-        color: #000;
+        color: var(--color-titles-headers)
       }
-      // .card-body small {
-      //   text-wrap: nowrap;
-      // }
+      .card-body small {
+        color: var(--color-titles-headers)
+      }
     }
     button {
       align-items: center;
@@ -579,7 +583,7 @@ body {
       margin-bottom: 20px;
       button {
         border: 2px solid #e0e0e0;
-        color: var(--color-contactMeBtn-MainSlider);
+        color: var(--color-titles-headers);
         font-size: 13px;
         padding: 5px 10px;
         font-weight: 700;
@@ -587,7 +591,7 @@ body {
         &:hover {
           border-color: var(--color-cta-btn);
           background-color: var(--color-cta-btn);
-          color: var(--color-background-body);
+          color: var(--color-titles-headers);
         }
       }
     }
@@ -770,9 +774,10 @@ body {
       font-weight: 900;
       &:hover {
         cursor: pointer;
-        background-color: transparent;
+        background-color: var(--color-background-body);
         border: 2px solid #e0e0e0;
-        color: var(--color-cta-btn);
+        color: var(--color-titles-headers);
+        color: var(--color-titles-headers);
       }
     }
   }
@@ -862,18 +867,18 @@ body {
         }
       }
       &::after {
+        position: absolute;
         content: "";
-        background-color: #00000030;
-        // background-color: #ababab;
+        background-color: #fd65007a;
         position: absolute;
         left: -25px;
         bottom: -40px;
-        height: 60%;
-        width: 80%;
+        height: 70%;
+        width: 85%;
       }
     }
     .meansOfContact_socialMedia {
-      margin-top: 100px;
+      margin-top: 125px;
       display: grid;
       place-content: center;
       padding-left: 20px;
@@ -896,7 +901,7 @@ body {
           font-family: var(--Font-Titles);
           letter-spacing: 0.8px;
           a {
-            color: #262626;
+            color: var(--color-titles-headers);
             &:hover {
               cursor: pointer;
               color: var(--color-cta-btn);
@@ -1362,6 +1367,7 @@ body {
       letter-spacing: 2px;
       line-height: 1.8;
       background-color: var(--color-background-body);
+      color: var(--color-titles-headers);
       img {
         width: 100px;
         height: 100px;
@@ -1372,11 +1378,10 @@ body {
         font-weight: 800;
         font-family: var(--Font-Body);
         text-transform: uppercase;
-        color: #000;
       }
-      // .card-body small {
-      //   text-wrap: nowrap;
-      // }
+      .card-body small {
+        color: var(--color-titles-headers);
+      }
     }
     button {
       align-items: center;
@@ -1790,18 +1795,18 @@ body {
         }
       }
       &::after {
+        position: absolute;
         content: "";
-        background-color: #00000030;
-        // background-color: #ababab;
+        background-color: #fd65007a;
         position: absolute;
         left: -25px;
-        bottom: -40px;
-        height: 60%;
-        width: 80%;
+        bottom: -65px;
+        height: 70%;
+        width: 85%;
       }
     }
     .meansOfContact_socialMedia {
-      margin-top: 100px;
+      margin-top: 125px;
       display: grid;
       place-content: center;
       padding-left: 20px;
@@ -2288,6 +2293,7 @@ body {
       letter-spacing: 2px;
       line-height: 1.8;
       background-color: var(--color-background-body);
+      color: var(--color-titles-headers);
       img {
         width: 100px;
         height: 100px;
@@ -2298,11 +2304,10 @@ body {
         font-weight: 800;
         font-family: var(--Font-Body);
         text-transform: uppercase;
-        color: #000;
       }
-      // .card-body small {
-      //   text-wrap: nowrap;
-      // }
+      .card-body small {
+        color: var(--color-titles-headers);
+      }
     }
     button {
       align-items: center;
@@ -2434,7 +2439,7 @@ body {
       margin-bottom: 20px;
       button {
         border: 2px solid #e0e0e0;
-        color: var(--color-contactMeBtn-MainSlider);
+        color: var(--color-titles-headers);
         font-size: 13px;
         padding: 5px 10px;
         font-weight: 700;
@@ -2716,18 +2721,18 @@ body {
         }
       }
       &::after {
+        position: absolute;
         content: "";
-        background-color: #00000030;
-        // background-color: #ababab;
+        background-color: #fd65007a;
         position: absolute;
         left: -25px;
-        bottom: -40px;
-        height: 60%;
-        width: 80%;
+        bottom: -74px;
+        height: 70%;
+        width: 85%;
       }
     }
     .meansOfContact_socialMedia {
-      margin-top: 100px;
+      margin-top: 125px;
       display: grid;
       place-content: center;
       padding-left: 20px;
@@ -2750,7 +2755,7 @@ body {
           font-family: var(--Font-Titles);
           letter-spacing: 0.8px;
           a {
-            color: #262626;
+            color: var(--color-titles-headers);
             &:hover {
               cursor: pointer;
               color: var(--color-cta-btn);
@@ -2760,14 +2765,14 @@ body {
       }
     }
     .footer {
-      margin-top: 40px;
+      margin-top: 50px;
       margin-bottom: 10px;
       display: grid;
       place-content: center;
       background-color: transparent;
       .linksContent {
         display: flex;
-        gap: 25px;
+        gap: 50px;
         padding-left: 0;
         a {
           color: #ababab;
