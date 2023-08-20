@@ -307,3 +307,22 @@ playBtnFilms.forEach((btnFilm) =>
 );
 closefeaturedFilmsBtn.addEventListener("click", closefeaturedFilmsModal);
 featuredFilmsContent.addEventListener("click", closefeaturedFilmsModal);
+
+// ***** SCIPTS FOR MANAGE LAYOUT IN WIDTH> 1200px **** //
+
+const navBarDesktop = document.getElementById('navBarDesktop')
+const topOfNav = navBarDesktop.offsetTop
+console.log(navBarDesktop);
+
+function fixNav() {
+  const offsetTop = window.scrollY;
+  if (offsetTop >= topOfNav) {
+    document.body.classList.add("fixed-nav");
+    document.body.style.paddingTop = navBarDesktop.offsetHEight + "px"
+  } else {
+    document.body.style.paddingTop = 0;
+    document.body.classList.remove("fixed-nav")
+  }
+}
+
+window.addEventListener("scroll", fixNav)

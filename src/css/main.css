@@ -1578,10 +1578,10 @@ body {
             height: 18px;
             width: 20px; } }
 
-@media (min-width: 812px) {
+@media (min-width: 1200px) {
   #navBarMobile {
-    display: flex;
-    gap: 222px;
+    display: none;
+    gap: 450px;
     align-items: center;
     height: max-content;
     padding: 15px;
@@ -1642,8 +1642,6 @@ body {
             color: #ffffff; }
             #navBarMobile #mobileMenu_modal .mobileMenu_content .links_menu li a:hover {
               color: var(--color-cta-btn); }
-  #carrouselIntro {
-    margin-top: 63px; }
   .zoomTransition {
     transition: transform 8s ease;
     transform: scale(1.2); }
@@ -1739,6 +1737,8 @@ body {
       transform: translateZ(0) translateY(0);
       opacity: 1; } }
     .labelSlide .contactMeBtn-focus-in-expand, .labelSide2 .contactMeBtn-focus-in-expand {
+      position: absolute;
+      left: 40px;
       width: max-content;
       font-weight: 700;
       letter-spacing: 1px;
@@ -1784,9 +1784,35 @@ body {
   #carouselExampleCaptions .carousel-control-next-icon {
     background-color: black; }
   #navBarDesktop {
-    display: none;
-    height: 300px;
-    background-color: cornflowerblue; }
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    padding: 30px;
+    top: 0;
+    z-index: 9;
+    width: 100vw;
+    background-color: var(--color-background-body);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    font-family: var(--Font-Titles); }
+    #navBarDesktop .navBarDesktopTitle {
+      font-family: var(--Font-Titles);
+      font-size: 32px;
+      letter-spacing: 1px;
+      font-style: italic; }
+      #navBarDesktop .navBarDesktopTitle small {
+        font-size: 13px; }
+    #navBarDesktop .navBarDesktop_links_menu {
+      display: flex;
+      font-size: 20px;
+      align-items: center;
+      column-gap: 25px;
+      margin-bottom: 0; }
+      #navBarDesktop .navBarDesktop_links_menu li a {
+        color: var(--color-titles-headers); }
+  .fixed-nav #navBarDesktop {
+    position: fixed; }
   #aboutMe {
     margin-top: 80px;
     margin-bottom: 50px; }

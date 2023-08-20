@@ -1871,11 +1871,11 @@ body {
   }
 }
 
-@media (min-width: 812px) {
+@media (min-width: 1200px) {
   // ----- NavBar ------ //
   #navBarMobile {
-    display: flex;
-    gap: 222px;
+    display: none;
+    gap: 450px;
     align-items: center;
     height: max-content;
     padding: 15px;
@@ -1947,9 +1947,9 @@ body {
     }
   }
   // -----CARROUSEL-------//
-  #carrouselIntro {
-    margin-top: 63px;
-  }
+  // #carrouselIntro {
+  //   // margin-top: 63px;
+  // }
   .zoomTransition {
     transition: transform 8s ease;
     transform: scale(1.2);
@@ -2066,6 +2066,8 @@ body {
       }
     }
     .contactMeBtn-focus-in-expand {
+      position: absolute;
+      left: 40px;
       width: max-content;
       // margin-top: 10px;
       font-weight: 700;
@@ -2135,10 +2137,47 @@ body {
   }
   /// ----- NavBar Desktop -----
   #navBarDesktop {
-    display: none;
-    height: 300px;
-    background-color: cornflowerblue;
+    // display: none;
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    padding: 30px;
+    // position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100vw;
+    background-color: var(--color-background-body);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    font-family: var(--Font-Titles);
+    .navBarDesktopTitle {
+      font-family: var(--Font-Titles);
+      font-size: 32px;
+      letter-spacing: 1px;
+      font-style: italic;
+      small {
+        font-size: 13px;
+      }
+    }
+    .navBarDesktop_links_menu {
+      display: flex;
+      font-size: 20px;
+      align-items: center;
+      column-gap: 25px;
+      margin-bottom: 0;
+      li {
+        a {
+        color: var(--color-titles-headers)
+      }
+      }
+      
+    }
   }
+  .fixed-nav #navBarDesktop {
+  position: fixed;
+
+}
   // ------ About Me section -------
   #aboutMe {
     margin-top: 80px;
