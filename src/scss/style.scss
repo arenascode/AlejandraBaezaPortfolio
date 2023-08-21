@@ -945,7 +945,7 @@ body {
 
 // *** Other Medias ** //
 
-@media (max-width: 811px) and (min-width: 481px) {
+@media (max-width: 1099px) and (min-width: 481px) {
   // ----- NavBar ------ //
   #navBarMobile {
     display: flex;
@@ -1871,7 +1871,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   // ----- NavBar ------ //
   #navBarMobile {
     display: none;
