@@ -571,7 +571,7 @@ body {
       gap: 10px;
       margin-bottom: 20px; }
       #featuredFilms .featuredFilms_buttons button {
-        border: 2px solid #e0e0e0;
+        border: 1px solid var(--color-titles-headers);
         color: var(--color-titles-headers);
         font-size: 13px;
         padding: 5px 10px;
@@ -1302,7 +1302,7 @@ body {
       gap: 40px;
       margin-bottom: 25px; }
       #featuredFilms .featuredFilms_buttons button {
-        border: 2px solid #e0e0e0;
+        border: 1px solid #e0e0e0;
         color: var(--color-titles-headers);
         font-size: 13px;
         padding: 5px 10px;
@@ -1807,24 +1807,29 @@ body {
       display: flex;
       font-size: 20px;
       align-items: center;
-      column-gap: 25px;
-      margin-bottom: 0; }
+      column-gap: 30px;
+      margin-bottom: 0;
+      margin-right: 15px; }
       #navBarDesktop .navBarDesktop_links_menu li a {
         color: var(--color-titles-headers); }
-  .fixed-nav #navBarDesktop {
+  body.fixed-nav #navBarDesktop {
     position: fixed; }
   #aboutMe {
-    margin-top: 80px;
-    margin-bottom: 50px; }
+    margin-top: 60px;
+    margin-bottom: 50px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 'sec1 sec2' 'sec1 sec3'; }
     #aboutMe .aboutMe_photoContainer {
-      margin: 0 50px 50px 15px;
-      position: relative; }
+      margin: 45px 50px 50px 15px;
+      position: relative;
+      grid-area: sec1; }
       #aboutMe .aboutMe_photoContainer::after {
         content: "";
         width: 80%;
-        height: 83%;
+        height: 95%;
         position: absolute;
-        bottom: -30px;
+        bottom: -13px;
         right: -24px;
         background: #fd6500;
         z-index: 1; }
@@ -1835,18 +1840,25 @@ body {
         #aboutMe .aboutMe_photoContainer img:hover {
           transform: translate(24px, 30px); }
     #aboutMe .aboutMe_description {
-      padding: 20px; }
+      padding: 18px;
+      grid-area: sec2; }
       #aboutMe .aboutMe_description h2 {
         margin: 20px 0;
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 800;
-        text-align: center; }
+        text-align: center;
+        margin-bottom: 40px; }
+      #aboutMe .aboutMe_description p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin: 17px 0; }
     #aboutMe .aboutMe_statistics {
       display: grid;
+      grid-area: sec3;
       place-content: center;
       gap: 30px;
       height: max-content;
-      margin-bottom: 20px; }
+      overflow: hidden; }
       #aboutMe .aboutMe_statistics .microSeries {
         display: flex;
         align-items: center;
@@ -1856,7 +1868,8 @@ body {
           font-weight: 700;
           text-align: end;
           font-family: var(--Font-Titles);
-          position: relative; }
+          position: relative;
+          padding: 10px; }
           #aboutMe .aboutMe_statistics .microSeries .microSeries_quantity::after {
             content: "";
             background-color: #fd6500;
@@ -1867,7 +1880,7 @@ body {
             right: -35px;
             top: 50%; }
         #aboutMe .aboutMe_statistics .microSeries .microSeries_text {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 600;
           font-style: italic;
           text-transform: uppercase;
@@ -1883,7 +1896,8 @@ body {
           font-weight: 700;
           text-align: end;
           font-family: var(--Font-Titles);
-          position: relative; }
+          position: relative;
+          padding: 10px; }
           #aboutMe .aboutMe_statistics .theatrePlays .theatrePlays_quantity::after {
             content: "";
             background-color: #fd6500;
@@ -1894,7 +1908,7 @@ body {
             right: -35px;
             top: 50%; }
         #aboutMe .aboutMe_statistics .theatrePlays .theatrePlays_text {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 600;
           font-style: italic;
           text-transform: uppercase;
@@ -1910,7 +1924,8 @@ body {
           font-weight: 700;
           text-align: end;
           font-family: var(--Font-Titles);
-          position: relative; }
+          position: relative;
+          padding: 10px; }
           #aboutMe .aboutMe_statistics .shortFilms .shortFilms_quantity::after {
             content: "";
             background-color: #fd6500;
@@ -1921,7 +1936,7 @@ body {
             right: -35px;
             top: 50%; }
         #aboutMe .aboutMe_statistics .shortFilms .shortFilms_text {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 600;
           font-style: italic;
           text-transform: uppercase;
@@ -1929,35 +1944,43 @@ body {
           text-align: left;
           width: 70%; }
   #recomendations {
-    width: 100%; }
+    width: 100%;
+    margin-top: 90px;
+    overflow: hidden; }
     #recomendations .carousel-item .card {
+      width: 40rem;
       border: none;
       margin: auto;
       text-align: center;
       font-family: var(--Font-Titles);
       font-style: italic;
-      font-size: 16px;
+      font-size: 20px;
       letter-spacing: 2px;
       line-height: 1.8;
       background-color: var(--color-background-body);
-      color: var(--color-titles-headers); }
+      color: var(--color-titles-headers);
+      overflow: hidden; }
       #recomendations .carousel-item .card img {
-        width: 100px;
-        height: 100px;
+        width: 170px;
+        height: 170px;
         margin: auto; }
       #recomendations .carousel-item .card .card-body span {
         font-style: normal;
         font-weight: 800;
         font-family: var(--Font-Body);
         text-transform: uppercase; }
+      #recomendations .carousel-item .card .card-text {
+        margin-top: 20px;
+        width: auto;
+        overflow: hidden; }
       #recomendations .carousel-item .card .card-body small {
         color: var(--color-titles-headers); }
     #recomendations button {
       align-items: center; }
   #videoIntroduction {
     width: 100%;
-    margin: 30px 0 50px 0;
-    height: 200px;
+    margin: 45px 0 50px 0;
+    height: 300px;
     background-image: url(../assets/img/videoIntroductionBG.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -1974,7 +1997,7 @@ body {
         gap: 20px;
         color: #f9f6f1;
         font-family: var(--Font-Titles);
-        font-size: 28px;
+        font-size: 40px;
         font-weight: 500;
         font-style: italic;
         letter-spacing: 1px; }
@@ -2036,14 +2059,14 @@ body {
       margin-bottom: 10px; }
       #featuredFilms .featuredFilms_textIntro h2 {
         font-family: var(--Font-Titles);
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 700;
         margin-bottom: 20px;
         letter-spacing: 1px; }
       #featuredFilms .featuredFilms_textIntro p {
         color: #ababab;
         font-family: "Nunito Sans";
-        font-size: 16px;
+        font-size: 20px;
         font-style: italic;
         font-weight: 400;
         line-height: 1.5;
@@ -2054,10 +2077,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 50px;
       margin-bottom: 20px; }
       #featuredFilms .featuredFilms_buttons button {
-        border: 2px solid #e0e0e0;
+        border: 1px solid #e0e0e0;
         color: var(--color-titles-headers);
         font-size: 13px;
         padding: 5px 10px;
@@ -2068,8 +2091,9 @@ body {
           background-color: var(--color-cta-btn);
           color: var(--color-background-body); }
     #featuredFilms .featuredFilms_videos {
+      margin-top: 50px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center; }
       #featuredFilms .featuredFilms_videos .video_item {
         display: flex;
@@ -2082,7 +2106,7 @@ body {
         transition: opacity 0.5s ease-in-out; }
         #featuredFilms .featuredFilms_videos .video_item .video_image {
           width: 100%;
-          height: 200px;
+          height: 300px;
           position: relative; }
           #featuredFilms .featuredFilms_videos .video_item .video_image img {
             height: 100%;
@@ -2170,6 +2194,11 @@ body {
           z-index: 6; }
           #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent #closeFeaturedFilmsBtn:hover {
             cursor: pointer; }
+        #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          margin: auto; }
         #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer .video_description {
           display: flex;
           flex-direction: column;
@@ -2177,7 +2206,7 @@ body {
           padding: 10px;
           margin: 5px; }
           #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer .video_description h3 {
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 700;
             letter-spacing: 1px; }
           #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer .video_description p {
@@ -2186,7 +2215,7 @@ body {
   #hireMeSection {
     display: flex;
     flex-direction: column;
-    height: 180px;
+    height: 250px;
     gap: 20px;
     justify-content: space-around;
     align-items: center;
@@ -2196,15 +2225,15 @@ body {
     background: linear-gradient(45deg, #554e44, #c3860cdc); }
     #hireMeSection p {
       margin-bottom: 0;
-      font-size: 26px;
+      font-size: 32px;
       font-style: italic;
       font-family: var(--Font-Titles); }
     #hireMeSection a {
       color: var(--color-titles-headers);
       border-color: var(--color-titles-headers);
       padding: 10px;
-      width: 35%;
-      font-size: large;
+      width: 16%;
+      font-size: 18px;
       font-weight: 900; }
       #hireMeSection a:hover {
         cursor: pointer;
@@ -2213,30 +2242,31 @@ body {
         color: var(--color-titles-headers);
         background-color: #fd650097; }
   #instagramSection {
+    margin-top: 25px;
     display: grid;
     place-content: center; }
     #instagramSection .titleAndAccount {
       display: grid;
       justify-items: center; }
       #instagramSection .titleAndAccount h2 {
-        font-size: 28px;
+        font-size: 32px;
         font-weight: 700;
         margin-bottom: 25px; }
       #instagramSection .titleAndAccount a {
         font-style: italic;
-        font-size: 18px;
+        font-size: 20px;
         color: var(--color-titles-headers); }
         #instagramSection .titleAndAccount a:hover {
           cursor: pointer;
           color: var(--color-cta-btn); }
     #instagramSection .photoGalery {
       display: grid;
-      grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8";
-      gap: 18px;
-      margin: 20px 10px; }
+      grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8";
+      gap: 15px;
+      margin: 35px 10px; }
       #instagramSection .photoGalery .img {
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
         object-fit: fill; }
     #instagramSection .img1 {
       grid-area: img1; }
@@ -2255,13 +2285,16 @@ body {
     #instagramSection .img8 {
       grid-area: img8; }
   #meansOfContact {
-    margin-top: 20px;
+    margin-top: 70px;
     display: grid;
+    grid-template-areas: "sec1 sec2" "sec3 sec3";
     place-content: center;
     background-image: url(../assets/img/footer-bg-round.png);
     background-position: top; }
     #meansOfContact .meansOfContact_mainPhoto {
+      grid-area: sec1;
       margin: auto;
+      margin-left: 35px;
       width: 354px;
       height: 497px;
       position: relative; }
@@ -2282,24 +2315,26 @@ body {
         height: 70%;
         width: 85%; }
     #meansOfContact .meansOfContact_socialMedia {
+      grid-area: sec2;
       margin-top: 125px;
       display: grid;
       place-content: center;
-      padding-left: 20px;
+      padding-left: 50px;
       padding-right: 20px; }
       #meansOfContact .meansOfContact_socialMedia .contactToMail {
         display: grid;
         place-content: center; }
         #meansOfContact .meansOfContact_socialMedia .contactToMail h2 {
+          font-size: 22px;
           font-style: italic;
           color: #ababab;
           font-family: var(--Font-Body);
           letter-spacing: 2px;
           text-align: left;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
           line-height: 1.3; }
         #meansOfContact .meansOfContact_socialMedia .contactToMail p {
-          font-size: 24px;
+          font-size: 36px;
           font-weight: 500;
           font-family: var(--Font-Titles);
           letter-spacing: 0.8px; }
@@ -2309,14 +2344,15 @@ body {
               cursor: pointer;
               color: var(--color-cta-btn); }
     #meansOfContact .footer {
-      margin-top: 50px;
+      grid-area: sec3;
+      margin-top: 130px;
       margin-bottom: 10px;
       display: grid;
-      place-content: center;
       background-color: transparent; }
       #meansOfContact .footer .linksContent {
         display: flex;
-        gap: 50px;
+        justify-content: space-around;
+        gap: 80px;
         padding-left: 0; }
         #meansOfContact .footer .linksContent a {
           color: #ababab;

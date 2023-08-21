@@ -225,6 +225,8 @@ function applyFilter(filmType) {
   videoItems.forEach((item) => {
     if (filmType === "all" || item.dataset.category === filmType) {
       item.style.display = "flex";
+      item.style.width = "60%";
+      item.style.margin = "auto";
       setTimeout(() => {
         item.classList.add("visible");
       }, 20);
