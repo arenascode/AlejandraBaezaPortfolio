@@ -684,17 +684,17 @@ body {
           z-index: 6; }
           #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent #closeFeaturedFilmsBtn:hover {
             cursor: pointer; }
-        #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer .video_description {
+        #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilms_videoDescription {
           display: flex;
           flex-direction: column;
           align-items: center;
           padding: 10px;
           margin: 5px; }
-          #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer .video_description h3 {
+          #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilms_videoDescription h3 {
             font-size: 18px;
             font-weight: 700;
             letter-spacing: 1px; }
-          #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilmsPlayer .video_description p {
+          #featuredFilms .featuredFilmsModalContainer .featuredFilmsModalContent .featuredFilms_videoDescription p {
             font-style: italic;
             text-transform: uppercase; }
   #hireMeSection {

@@ -182,8 +182,20 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var player;
+var playerFeaturedFilms;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player", {
+    height: "390",
+    width: "640",
+    videoId: "yb4ovyv9xqU",
+    playerVars: {
+      playsinline: 1,
+    },
+    events: {},
+  });
+
+  // player to shortFilm 
+  playerFeaturedFilms = new YT.Player("playerFilm", {
     height: "390",
     width: "640",
     videoId: "yb4ovyv9xqU",
@@ -250,6 +262,9 @@ const featuredFilmsContent = document.querySelector(
   ".featuredFilmsModalContent"
 );
 const closefeaturedFilmsBtn = document.getElementById("closeFeaturedFilmsBtn");
+const videoDescription = document.querySelector(
+  ".featuredFilms_videoDescription"
+);
 
 function openFeaturedFilmsModal() {
   featuredFilmsModal.style.display = "flex";
@@ -261,6 +276,7 @@ function openFeaturedFilmsModal() {
 
 function closefeaturedFilmsModal() {
   featuredFilmsModal.style.opacity = 0;
+  playerFeaturedFilms.stopVideo()
   setTimeout(() => {
     featuredFilmsModal.style.display = "none";
   }, 500);
@@ -271,35 +287,35 @@ function showFeaturedFilms() {
   const filmType = this.dataset.filmtype;
   switch (filmType) {
     case "microNovela":
-      filmsPlayer.innerHTML = `
-      <div class="video_description">
+      videoDescription.innerHTML = `
       <h3>Amor Ciego</h3>
       <p>MICRO NOVELA</p>
-      </div>
       `;
       setTimeout(() => {
         openFeaturedFilmsModal();
       }, 50);
       break;
     case "shortFilm":
-      filmsPlayer.innerHTML = `
-      <div class="video_description">
+      playerFeaturedFilms.loadVideoById("yb4ovyv9xqU");
+      videoDescription.innerHTML = `
       <h3>Obsesiones</h3>
-      <p>SHORT FILM</p>
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/yb4ovyv9xqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      <p>SHORT FILM</p>`
       setTimeout(() => {
         openFeaturedFilmsModal();
+        playerFeaturedFilms.playVideo()
+        console.log(`playerShortF ${JSON.stringify(playerFeaturedFilms)}`);
       }, 50);
       break;
     case "musicVideo":
-      openFeaturedFilmsModal();
-      filmsPlayer.innerHTML = `
-      <div class="video_description">
+      playerFeaturedFilms.loadVideoById("DESUB4NFWsY")
+      videoDescription.innerHTML = `
       <h3>Me Perdiste</h3>
-      <p>MUSIC VIDEO</p>
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/DESUB4NFWsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      <p>MUSIC VIDEO</p>`
+      setTimeout(() => {
+        openFeaturedFilmsModal();
+        playerFeaturedFilms.playVideo();
+        console.log(`playerShortF ${JSON.stringify(playerFeaturedFilms)}`);
+      }, 50);
       break;
   }
 }
