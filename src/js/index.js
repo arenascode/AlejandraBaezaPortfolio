@@ -237,7 +237,6 @@ function applyFilter(filmType) {
   videoItems.forEach((item) => {
     if (filmType === "all" || item.dataset.category === filmType) {
       item.style.display = "flex";
-      item.style.width = "60%";
       item.style.margin = "auto";
       setTimeout(() => {
         item.classList.add("visible");
@@ -303,7 +302,6 @@ function showFeaturedFilms() {
       setTimeout(() => {
         openFeaturedFilmsModal();
         playerFeaturedFilms.playVideo()
-        console.log(`playerShortF ${JSON.stringify(playerFeaturedFilms)}`);
       }, 50);
       break;
     case "musicVideo":
@@ -314,7 +312,6 @@ function showFeaturedFilms() {
       setTimeout(() => {
         openFeaturedFilmsModal();
         playerFeaturedFilms.playVideo();
-        console.log(`playerShortF ${JSON.stringify(playerFeaturedFilms)}`);
       }, 50);
       break;
   }
